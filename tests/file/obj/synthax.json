@@ -1,0 +1,17 @@
+{
+  "nbr": 34,
+  "str_empty": "",
+  "str": "str",
+  "null": null
+  "bool_true": true,
+  "bool_false": false,
+  "array": [
+    42,
+    null,
+    true,
+    [43, 23, 5, [{}]],
+    {},
+    ["titi"],
+    { "object_in_array": "oui" }
+  ]
+}

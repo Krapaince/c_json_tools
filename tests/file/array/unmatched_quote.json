@@ -1,0 +1,28 @@
+[
+  34,
+  "",
+  "str",
+  null,
+  true,
+  false,
+  [
+    42,
+    null,
+    true,
+    [
+      43,
+      23,
+      5,
+      [
+        {}
+      ]
+    ],
+    {},
+    [
+      "titi
+    ],
+    {
+      "object_in_array": "oui"
+    }
+  ]
+]

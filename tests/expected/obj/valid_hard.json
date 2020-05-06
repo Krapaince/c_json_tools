@@ -1,0 +1,33 @@
+{
+  "nbr": -34,
+  "nbr_min": -2147483648,
+  "str_empty": "",
+  "str": "str",
+  "null": null,
+  "bool_true": true,
+  "bool_false": false,
+  "obj": {
+    "array": [
+      42,
+      null,
+      true,
+      [
+        43,
+        23,
+        5,
+        [
+          {
+            "obj": {}
+          }
+        ]
+      ],
+      {},
+      [
+        "titi"
+      ],
+      {
+        "object_in_array": "oui"
+      }
+    ]
+  }
+}
