@@ -22,7 +22,7 @@ typedef enum
     JSON_STR,
     JSON_NULL,
     JSON_ARRAY,
-    JSON_OBJ
+    JSON_OBJ,
 } json_type_t;
 
 typedef struct

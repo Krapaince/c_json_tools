@@ -21,7 +21,7 @@ static void json_check_for_invalid_eof(void const* json_ptr)
     }
 }
 
-json_object_t* json_parse_obj_from_fd(int fd)
+json_object_t* json_object_parse_from_fd(int fd)
 {
     parser_t parser;
     json_object_t* obj = NULL;
@@ -40,7 +40,7 @@ json_object_t* json_parse_obj_from_fd(int fd)
     return obj;
 }
 
-json_array_t* json_parse_array_from_fd(int fd)
+json_array_t* json_array_parse_from_fd(int fd)
 {
     parser_t parser;
     json_array_t* array = NULL;

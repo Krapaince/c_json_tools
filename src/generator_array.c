@@ -17,7 +17,7 @@
 #include <typedef/array.h>
 #include <typedef/generator.h>
 
-int json_generate_array_to_fd(json_array_t const* array, int fd,
+int json_array_generate_to_fd(json_array_t const* array, int fd,
                               generator_setting_t const* setting)
 {
     generator_t generator;
@@ -38,7 +38,7 @@ int json_generate_array_to_fd(json_array_t const* array, int fd,
     return ret;
 }
 
-int json_generate_array_to_file(json_array_t const* array, char const* filepath,
+int json_array_generate_to_file(json_array_t const* array, char const* filepath,
                                 generator_setting_t const* setting)
 {
     int fd = open(filepath, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
@@ -51,7 +51,7 @@ int json_generate_array_to_file(json_array_t const* array, char const* filepath,
     }
     else
     {
-        ret = json_generate_array_to_fd(array, fd, setting);
+        ret = json_array_generate_to_fd(array, fd, setting);
         close(fd);
     }
     return ret;

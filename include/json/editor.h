@@ -9,6 +9,7 @@
 #define JSON_EXPORT_EDITOR_H_
 
 #include <json/editor/append.h>
+#include <json/editor/compare.h>
 #include <json/editor/create.h>
 #include <json/editor/destroy.h>
 #include <json/editor/set.h>

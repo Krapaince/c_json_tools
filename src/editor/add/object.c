@@ -36,7 +36,7 @@ int json_object_add_element(json_object_t* obj, json_object_element_t* element)
 {
     int ret = JSON_EXIT_SUCCESS;
 
-    if (obj->len <= obj->len_alloc)
+    if (obj->len_alloc <= obj->len)
     {
         ret = json_object_increase_size(obj);
     }

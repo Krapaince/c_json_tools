@@ -8,7 +8,7 @@
 #ifndef JSON_EXPORT_GETTERS_ARRAY_H_
 #define JSON_EXPORT_GETTERS_ARRAY_H_
 
-#include <json/error.h>
-#include <json/type/array.h>
+#include <json/getters/index/array.h>
+#include <json/getters/value/array.h>
 
 #endif /* !JSON_EXPORT_GETTERS_ARRAY_H_ */

@@ -36,7 +36,7 @@ int json_array_add_element(json_array_t* array, json_array_element_t* element)
 {
     int ret = JSON_EXIT_SUCCESS;
 
-    if (array->len <= array->len_alloc)
+    if (array->len_alloc <= array->len)
     {
         ret = json_array_increase_size(array);
     }

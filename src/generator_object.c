@@ -17,8 +17,8 @@
 #include <typedef/generator.h>
 #include <typedef/object.h>
 
-int json_generate_obj_to_fd(json_object_t const* obj, int fd,
-                            generator_setting_t const* setting)
+int json_object_generate_to_fd(json_object_t const* obj, int fd,
+                               generator_setting_t const* setting)
 {
     generator_t generator;
     int ret;
@@ -38,8 +38,8 @@ int json_generate_obj_to_fd(json_object_t const* obj, int fd,
     return ret;
 }
 
-int json_generate_obj_to_file(json_object_t const* obj, char const* filepath,
-                              generator_setting_t const* setting)
+int json_object_generate_to_file(json_object_t const* obj, char const* filepath,
+                                 generator_setting_t const* setting)
 {
     int fd = open(filepath, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
     int ret;
@@ -51,7 +51,7 @@ int json_generate_obj_to_file(json_object_t const* obj, char const* filepath,
     }
     else
     {
-        ret = json_generate_obj_to_fd(obj, fd, setting);
+        ret = json_object_generate_to_fd(obj, fd, setting);
         close(fd);
     }
     return ret;

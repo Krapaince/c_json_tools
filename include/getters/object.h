@@ -10,9 +10,21 @@
 
 #include <typedef/object.h>
 
-// Gets the index corresponding to the key. If there isn't any
-// element corresponding, the function fails. Otherwise
-// the *ptr is set with the index and the function success.
+// Gets the element from the object and sets *element with it.
+// If the index in out of the bound or the type doesn't match, the function
+// fails and sets *element to NULL.
+//
+// Return:
+//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EXIT_FAILURE
+//
+int json_object_get_const_element_by_index_and_type(
+    json_object_t const* object, size_t index, json_type_t type,
+    json_object_element_t const** element);
+
+// Gets the element corresponding to the key. If there isn't any
+// element corresponding to the key, the function fails. Otherwise
+// *index is set and the function success.
 //
 // Return:
 //   Failure: JSON_EXIT_FAILURE

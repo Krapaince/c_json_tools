@@ -23,7 +23,7 @@ int json_array_add_object(json_array_t* array, json_object_t* value)
 {
     json_array_element_t element;
 
-    element.type = JSON_NB;
+    element.type = JSON_OBJ;
     element.value.obj = value;
     return json_array_add_element(array, &element);
 }

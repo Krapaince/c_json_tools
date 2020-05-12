@@ -28,7 +28,7 @@ static int json_does_eof_is_valid(parser_t* parser)
     return ret;
 }
 
-json_object_t* json_parse_obj_from_str(char const* str)
+json_object_t* json_object_parse_from_str(char const* str)
 {
     parser_t parser;
     json_object_t* obj = NULL;
@@ -49,7 +49,7 @@ json_object_t* json_parse_obj_from_str(char const* str)
     return obj;
 }
 
-json_array_t* json_parse_array_from_str(char const* str)
+json_array_t* json_array_parse_from_str(char const* str)
 {
     parser_t parser;
     json_array_t* array = NULL;
