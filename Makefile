@@ -98,7 +98,7 @@ SRC					=	editor/add/array/advanced_type.c			\
 						
 OBJ_SRC				=	$(addprefix $(DIR), $(SRC:.c=.o))
 
-BINARY				=	libjson
+BINARY				=	libjson.a
 
 DIR_TEST			=	./tests/
 SRC_TEST			=	editor/append.c						\
