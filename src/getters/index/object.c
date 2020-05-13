@@ -43,3 +43,21 @@ int json_object_get_const_element_by_index_and_type(
     }
     return ret;
 }
+
+int json_object_get_element_by_index(json_object_t* object, size_t index,
+                                     json_object_element_t** element)
+{
+    int ret;
+
+    if (index < object->len)
+    {
+        *element = &object->elements[index];
+        ret = JSON_EXIT_SUCCESS;
+    }
+    else
+    {
+        *element = NULL;
+        ret = JSON_EXIT_FAILURE;
+    }
+    return ret;
+}

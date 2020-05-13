@@ -28,4 +28,3 @@ bool json_object_compare(json_object_t const* obj1, json_object_t const* obj2);
 bool json_array_compare(json_array_t const* array1, json_array_t const* array2);
 
 #endif /* !JSON_EXPORT_EDITOR_COMAPRE_H_ */
-

@@ -9,7 +9,7 @@
 #include <editor/destroy/union.h>
 #include <editor/key.h>
 #include <error.h>
-#include <getters/object.h>
+#include <getters/key/object.h>
 #include <typedef/object.h>
 
 int json_object_set_object_by_key(json_object_t* obj, char const* key,

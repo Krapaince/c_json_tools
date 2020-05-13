@@ -25,11 +25,21 @@ SRC					=	editor/add/array/advanced_type.c			\
 						editor/append/object/basic_type.c			\
 						editor/compare/advanced_type.c				\
 						editor/compare/basic_type.c					\
+						editor/compare/type.c						\
 						editor/create/array.c						\
 						editor/create/object.c						\
 						editor/destroy/array.c						\
 						editor/destroy/object.c						\
 						editor/destroy/union.c						\
+						editor/extract/index/array/advanced_type.c	\
+						editor/extract/index/array/basic_type.c		\
+						editor/extract/index/array.c				\
+						editor/extract/index/object/advanced_type.c	\
+						editor/extract/index/object/basic_type.c	\
+						editor/extract/index/object.c				\
+						editor/extract/key/object/advanced_type.c	\
+						editor/extract/key/object/basic_type.c		\
+						editor/extract/key/object.c					\
 						editor/key.c								\
 						editor/set/index/array/advanced_type.c		\
 						editor/set/index/array/basic_type.c			\
@@ -58,14 +68,10 @@ SRC					=	editor/add/array/advanced_type.c			\
 						getters/index/object/advanced_type.c		\
 						getters/index/object/basic_type.c			\
 						getters/index/object.c						\
-						getters/key/object/array.c					\
-						getters/key/object/bool.c					\
-						getters/key/object/nb.c						\
-						getters/key/object/null.c					\
-						getters/key/object/object.c					\
-						getters/key/object/str.c					\
+						getters/key/object/advanced_type.c			\
+						getters/key/object/basic_type.c				\
+						getters/key/key.c							\
 						getters/key/object.c						\
-						getters/type.c								\
 						getters/value/array/advanced_type.c			\
 						getters/value/array/basic_type.c			\
 						getters/value/array.c						\
@@ -103,6 +109,9 @@ BINARY				=	libjson.a
 DIR_TEST			=	./tests/
 SRC_TEST			=	editor/append.c						\
 						editor/compare.c					\
+						editor/extract/index/array.c		\
+						editor/extract/index/object.c		\
+						editor/extract/key/object.c			\
 						editor/set/index/array.c			\
 						editor/set/key/object.c				\
 						editor/unset/index.c				\

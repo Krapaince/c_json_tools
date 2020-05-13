@@ -7,7 +7,7 @@
 
 #include <string.h>
 
-#include <getters/array.h>
+#include <getters/value/array.h>
 #include <typedef/array.h>
 
 int json_array_get_index_by_bool_value(json_array_t const* array, bool value,

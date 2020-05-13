@@ -6,7 +6,7 @@
 */
 
 #include <error.h>
-#include <getters/object.h>
+#include <getters/index/object.h>
 #include <typedef/object.h>
 
 int json_object_get_object_by_index(json_object_t const* object, size_t index,

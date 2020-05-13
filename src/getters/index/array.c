@@ -5,6 +5,7 @@
 ** getters array index
 */
 
+#include <editor/compare/type.h>
 #include <error.h>
 #include <typedef/array.h>
 
@@ -35,11 +36,29 @@ int json_array_get_const_element_by_index_and_type(
 
     if (ret == JSON_EXIT_SUCCESS)
     {
-        if ((*element)->type != type)
+        if (json_array_compare_element_type(*element, type) == false)
         {
             *element = NULL;
             ret = JSON_EXIT_FAILURE;
         }
+    }
+    return ret;
+}
+
+int json_array_get_element_by_index(json_array_t* array, size_t index,
+                                    json_array_element_t** element)
+{
+    int ret;
+
+    if (index < array->len)
+    {
+        *element = &array->elements[index];
+        ret = JSON_EXIT_SUCCESS;
+    }
+    else
+    {
+        *element = NULL;
+        ret = JSON_EXIT_FAILURE;
     }
     return ret;
 }

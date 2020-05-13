@@ -24,4 +24,3 @@ bool json_compare_element(json_union_value_t const* value1, json_type_t type1,
                           json_union_value_t const* value2, json_type_t type2);
 
 #endif /* !JSON_EDITOR_COMPARE_H_ */
-

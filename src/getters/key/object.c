@@ -7,8 +7,8 @@
 
 #include <string.h>
 
+#include <editor/compare/type.h>
 #include <error.h>
-#include <getters/type.h>
 #include <typedef/object.h>
 
 int json_object_get_index_by_key(json_object_t const* obj, char const* key,
@@ -30,60 +30,69 @@ int json_object_get_index_by_key(json_object_t const* obj, char const* key,
 
 int json_object_get_const_element_by_key(json_object_t const* obj,
                                          char const* key,
-                                         json_object_element_t const** ptr)
+                                         json_object_element_t const** value)
 {
     size_t index;
     int ret = json_object_get_index_by_key(obj, key, &index);
 
     if (ret == JSON_EXIT_SUCCESS)
     {
-        *ptr = &obj->elements[index];
+        *value = &obj->elements[index];
     }
     else
     {
-        *ptr = NULL;
+        *value = NULL;
     }
     return ret;
 }
 
-int json_object_get_element_by_key(json_object_t* obj, char const* key,
-                                   json_object_element_t** ptr)
+int json_object_get_const_element_by_key_and_type(
+    json_object_t const* obj, char const* key, json_type_t type,
+    json_object_element_t const** value)
 {
-    size_t index;
-    int ret = json_object_get_index_by_key(obj, key, &index);
+    int ret = json_object_get_const_element_by_key(obj, key, value);
 
     if (ret == JSON_EXIT_SUCCESS)
     {
-        *ptr = &obj->elements[index];
-    }
-    else
-    {
-        *ptr = NULL;
-    }
-    return ret;
-}
-
-int json_object_get_element_by_key_and_type(json_object_t const* obj,
-                                            char const* key, json_type_t type,
-                                            json_object_element_t const** ptr)
-{
-    int ret = json_object_get_const_element_by_key(obj, key, ptr);
-
-    if (ret == JSON_EXIT_SUCCESS)
-    {
-        if (json_object_does_element_is_type(*ptr, type) == false)
+        if (json_object_compare_element_type(*value, type) == false)
         {
-            *ptr = NULL;
+            *value = NULL;
             ret = JSON_EXIT_FAILURE;
         }
     }
     return ret;
 }
 
-bool json_object_does_key_exist(json_object_t const* obj, char const* key)
+int json_object_get_element_by_key(json_object_t* obj, char const* key,
+                                   json_object_element_t** value)
 {
-    json_object_element_t const* element = NULL;
+    size_t index;
+    int ret = json_object_get_index_by_key(obj, key, &index);
 
-    json_object_get_const_element_by_key(obj, key, &element);
-    return element != NULL;
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        *value = &obj->elements[index];
+    }
+    else
+    {
+        *value = NULL;
+    }
+    return ret;
+}
+
+int json_object_get_element_by_key_and_type(json_object_t* obj, char const* key,
+                                            json_type_t type,
+                                            json_object_element_t** value)
+{
+    int ret = json_object_get_element_by_key(obj, key, value);
+
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        if (json_object_compare_element_type(*value, type) == false)
+        {
+            *value = NULL;
+            ret = JSON_EXIT_FAILURE;
+        }
+    }
+    return ret;
 }

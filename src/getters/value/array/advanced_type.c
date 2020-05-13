@@ -5,7 +5,7 @@
 ** getters value array advanced_type
 */
 
-#include <getters/array.h>
+#include <getters/value/array.h>
 #include <typedef/array.h>
 #include <typedef/object.h>
 

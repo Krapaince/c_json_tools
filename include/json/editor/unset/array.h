@@ -42,4 +42,3 @@ int json_array_unset_elements_by_value_array(json_array_t* array,
                                              json_array_t* value);
 
 #endif /* !JSON_EXPORT_EDITOR_UNSET_ARRAY_H_ */
-

@@ -72,4 +72,3 @@ int json_array_get_array_by_index(json_array_t const* array, size_t index,
                                   json_array_t const** value);
 
 #endif /* !JSON_EXPORT_GETTERS_INDEX_ARRAY_H_ */
-

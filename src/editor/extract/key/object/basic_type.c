@@ -1,0 +1,65 @@
+/*
+** EPITECH PROJECT, 2020
+** json library
+** File description:
+** editor extract key object basic type
+*/
+
+#include <editor/extract/key/object.h>
+#include <error.h>
+
+int json_object_extract_bool_by_key(json_object_t* obj, char const* key,
+                                    bool* value)
+{
+    json_object_element_t element;
+    int ret = json_object_extract_element_by_key_and_type(obj, key, JSON_BOOL,
+                                                          &element);
+
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        *value = element.value.boolean;
+    }
+    return ret;
+}
+
+int json_object_extract_nb_by_key(json_object_t* obj, char const* key,
+                                  int* value)
+{
+    json_object_element_t element;
+    int ret = json_object_extract_element_by_key_and_type(obj, key, JSON_NB,
+                                                          &element);
+
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        *value = element.value.nb;
+    }
+    return ret;
+}
+
+int json_object_extract_string_by_key(json_object_t* obj, char const* key,
+                                      char** value)
+{
+    json_object_element_t element;
+    int ret = json_object_extract_element_by_key_and_type(obj, key, JSON_STR,
+                                                          &element);
+
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        *value = element.value.str.value;
+    }
+    return ret;
+}
+
+int json_object_extract_str_by_key(json_object_t* obj, char const* key,
+                                   str_t* value)
+{
+    json_object_element_t element;
+    int ret = json_object_extract_element_by_key_and_type(obj, key, JSON_STR,
+                                                          &element);
+
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        *value = element.value.str;
+    }
+    return ret;
+}

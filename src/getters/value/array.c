@@ -6,13 +6,13 @@
 */
 
 #include <editor/compare.h>
+#include <editor/compare/type.h>
 #include <error.h>
-#include <getters/type.h>
 #include <typedef/array.h>
 
-int json_array_get_index_by_value(json_array_t const* array,
-                                  json_array_element_t const* element,
-                                  size_t* index)
+static int json_array_get_index_by_value(json_array_t const* array,
+                                         json_array_element_t const* element,
+                                         size_t* index)
 {
     size_t i = 0;
     json_array_element_t const* current;
@@ -39,7 +39,7 @@ int json_array_get_index_by_value_and_type(json_array_t const* array,
 
     if (ret == JSON_EXIT_SUCCESS)
     {
-        if (json_array_does_element_is_type(&array->elements[*index],
+        if (json_array_compare_element_type(&array->elements[*index],
                                             element->type) == false)
         {
             ret = JSON_EXIT_FAILURE;

@@ -6,7 +6,7 @@
 */
 
 #include <error.h>
-#include <getters/array.h>
+#include <getters/index/array.h>
 #include <typedef/array.h>
 
 int json_array_get_object_by_index(json_array_t const* array, size_t index,

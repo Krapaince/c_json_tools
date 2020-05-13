@@ -20,7 +20,7 @@ Test(json_object_append_bool, test_json_object_append_bool)
     cr_assert(obj != NULL);
     cr_assert(json_object_append_bool(obj, "boolean", true) ==
               JSON_EXIT_SUCCESS);
-    cr_assert(json_object_get_bool_value_by_key(obj, "boolean", &value) ==
+    cr_assert(json_object_get_bool_by_key(obj, "boolean", &value) ==
               JSON_EXIT_SUCCESS);
     cr_assert(json_object_append_bool(obj, "boolean", true) ==
               JSON_EXIT_FAILURE);
@@ -35,7 +35,7 @@ Test(json_object_append_nb, test_json_object_append_nb)
 
     cr_assert(obj != NULL);
     cr_assert(json_object_append_nb(obj, "key", 33) == JSON_EXIT_SUCCESS);
-    cr_assert(json_object_get_nb_value_by_key(obj, "key", &value) ==
+    cr_assert(json_object_get_nb_by_key(obj, "key", &value) ==
               JSON_EXIT_SUCCESS);
     cr_assert(json_object_append_nb(obj, "key", 33) == JSON_EXIT_FAILURE);
     cr_expect(json_errno == JSON_E_KEY_ALREADY_EXIST);
@@ -50,7 +50,7 @@ Test(json_object_append_str_dup, test_json_object_append_str_dup)
     cr_assert(obj != NULL);
     cr_assert(json_object_append_str_dup(obj, "key", "toto") ==
               JSON_EXIT_SUCCESS);
-    cr_assert(json_object_get_str_value_by_key(obj, "key", &value) ==
+    cr_assert(json_object_get_string_by_key(obj, "key", &value) ==
               JSON_EXIT_SUCCESS);
     cr_assert(json_object_append_str_dup(obj, "key", "titi") ==
               JSON_EXIT_FAILURE);
@@ -67,7 +67,7 @@ Test(json_object_append_str, test_json_object_append_str)
     cr_assert(obj != NULL);
     cr_assert(str != NULL);
     cr_assert(json_object_append_str(obj, "key", str) == JSON_EXIT_SUCCESS);
-    cr_assert(json_object_get_str_value_by_key(obj, "key", &value) ==
+    cr_assert(json_object_get_string_by_key(obj, "key", &value) ==
               JSON_EXIT_SUCCESS);
     cr_assert(json_object_append_str(obj, "key", "titi") == JSON_EXIT_FAILURE);
     cr_expect(json_errno == JSON_E_KEY_ALREADY_EXIST);
@@ -81,7 +81,7 @@ Test(json_object_append_null, test_json_object_append_null)
 
     cr_assert(obj != NULL);
     cr_assert(json_object_append_null(obj, "key") == JSON_EXIT_SUCCESS);
-    cr_assert(json_object_get_null_value_by_key(obj, "key", &value) ==
+    cr_assert(json_object_get_null_by_key(obj, "key", &value) ==
               JSON_EXIT_SUCCESS);
     cr_assert(json_object_append_null(obj, "key") == JSON_EXIT_FAILURE);
     cr_expect(json_errno == JSON_E_KEY_ALREADY_EXIST);
@@ -98,7 +98,7 @@ Test(json_object_append_array, test_json_object_append_array)
     cr_assert(sub_array != NULL);
     cr_assert(json_object_append_array(obj, "key", sub_array) ==
               JSON_EXIT_SUCCESS);
-    cr_assert(json_object_get_array_value_by_key(obj, "key", &value) ==
+    cr_assert(json_object_get_array_by_key(obj, "key", &value) ==
               JSON_EXIT_SUCCESS);
     cr_assert(json_object_append_array(obj, "key", sub_array) ==
               JSON_EXIT_FAILURE);
@@ -116,7 +116,7 @@ Test(json_object_append_object, test_json_object_append_object)
     cr_assert(sub_obj != NULL);
     cr_assert(json_object_append_object(obj, "key", sub_obj) ==
               JSON_EXIT_SUCCESS);
-    cr_assert(json_object_get_object_value_by_key(obj, "key", &value) ==
+    cr_assert(json_object_get_object_by_key(obj, "key", &value) ==
               JSON_EXIT_SUCCESS);
     cr_assert(json_object_append_object(obj, "key", sub_obj) ==
               JSON_EXIT_FAILURE);
