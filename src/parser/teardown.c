@@ -26,11 +26,6 @@ static void json_teardown_parser_type_file(parser_t* parser)
     json_teardown_parser(parser);
 }
 
-static void json_teardown_parser_type_str(parser_t* parser)
-{
-    json_teardown_parser(parser);
-}
-
 void json_teardown_parser_fd(parser_t* parser)
 {
     json_teardown_parser_type_file(parser);
@@ -44,5 +39,5 @@ void json_teardown_parser_filepath(parser_t* parser)
 
 void json_teardown_parser_str(parser_t* parser)
 {
-    json_teardown_parser_type_str(parser);
+    json_teardown_parser(parser);
 }

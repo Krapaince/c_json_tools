@@ -22,8 +22,10 @@ bool json_compare_nb(int first, int second)
 
 bool json_compare_str(str_t const* first, str_t const* second)
 {
-    return first->len == second->len &&
-           strcmp(first->value, second->value) == 0;
+    int ret =
+        first->len == second->len && strcmp(first->value, second->value) == 0;
+
+    return ret;
 }
 
 bool json_compare_null(void const* first, void const* second)

@@ -92,4 +92,5 @@ int json_object_extract_object_by_index(json_object_t* object, size_t index,
 //
 int json_object_extract_array_by_index(json_object_t* object, size_t index,
                                        json_array_t** value);
+
 #endif /* !JSON_EXTRACT_INDEX_OBJECT_H_ */
