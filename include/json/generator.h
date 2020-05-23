@@ -36,7 +36,7 @@
 int json_object_generate_to_fd(json_object_t const* obj, int fd,
                                generator_setting_t const* setting);
 
-// generates a JSON array to the file specify by filepath from the obj.
+// generates a JSON object to the file specify by filepath from the obj.
 // The filepath is created if it doesn't exist or truncated if it exist.
 //
 //   obj - must be a valid json_object_t pointer (not NULL)
