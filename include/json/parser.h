@@ -61,10 +61,8 @@ json_object_t* json_object_parse_from_filepath(char const* filepath);
 //
 json_array_t* json_array_parse_from_filepath(char const* filepath);
 
-// Parses a JSON object thanks to str. When the end of the
-// object if reach, json_object_parse_from_str checks that there is only
-// whitespace characters after the object. If there isn't only whitespace
-// characters after the object the function fails.
+// Parses a JSON object thanks to str. If the function succeed and index is not
+// null, *index will be set with the index at which the parser stopped in str.
 //
 // Return:
 //   Failure: NULL
@@ -72,12 +70,10 @@ json_array_t* json_array_parse_from_filepath(char const* filepath);
 //
 //   In case of failure json_errno is set.
 //
-json_object_t* json_object_parse_from_str(char const* str);
+json_object_t* json_object_parse_from_str(char const* str, size_t* index);
 
-// Parses a JSON array thanks to str. When the end of the
-// array if reach, json_array_parse_from_str checks that there is only
-// whitespace characters after the array. If there isn't only whitespace
-// characters after the array the function fails.
+// Parses a JSON array thanks to str. If the function succeed and index is not
+// null, *index will be set with the index at which the parser stopped in str.
 //
 // Return:
 //   Failure: NULL
@@ -85,6 +81,6 @@ json_object_t* json_object_parse_from_str(char const* str);
 //
 //   In case of failure json_errno is set.
 //
-json_array_t* json_array_parse_from_str(char const* str);
+json_array_t* json_array_parse_from_str(char const* str, size_t* index);
 
 #endif /* !JSON_EXPORT_PARSER_H_ */

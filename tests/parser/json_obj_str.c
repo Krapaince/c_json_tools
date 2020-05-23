@@ -26,7 +26,7 @@ Test(json_object_parse_from_str, test_json_object_parse_from_str_valid)
     generator_setting_t setting = {SPACE, 2};
 
     cr_assert(str != NULL);
-    obj = json_object_parse_from_str(str);
+    obj = json_object_parse_from_str(str, NULL);
     cr_assert(obj != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_object_generate_to_file(obj,
@@ -41,26 +41,27 @@ Test(json_object_parse_from_str, test_json_object_parse_from_str_valid)
     free(str);
 }
 
+Test(json_object_parse_from_str, test_json_object_parse_from_array_valid_index)
+{
+    char* str = get_file_content("tests/file/obj/valid.json");
+    json_object_t* object;
+    size_t len = strlen(str);
+    size_t index = 0;
+
+    cr_assert(str != NULL);
+    object = json_object_parse_from_str(str, &index);
+    cr_assert(object != NULL);
+    cr_expect(index = len);
+    free(str);
+}
+
 Test(json_object_parse_from_str, test_json_object_parse_from_str_invalid_eof)
 {
     char* str = get_file_content("tests/file/obj/invalid_eof.json");
     json_object_t* obj;
 
     cr_assert(str != NULL);
-    obj = json_object_parse_from_str(str);
-    cr_assert(obj == NULL);
-    cr_assert(json_errno == JSON_E_INVALID_EOF);
-    free(str);
-}
-
-Test(json_object_parse_from_str,
-     test_json_object_parse_from_str_invalid_eof_excess)
-{
-    char* str = get_file_content("tests/file/obj/invalid_eof_excess.json");
-    json_object_t* obj;
-
-    cr_assert(str != NULL);
-    obj = json_object_parse_from_str(str);
+    obj = json_object_parse_from_str(str, NULL);
     cr_assert(obj == NULL);
     cr_assert(json_errno == JSON_E_INVALID_EOF);
     free(str);
