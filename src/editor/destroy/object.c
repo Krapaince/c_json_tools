@@ -14,13 +14,16 @@ void json_object_destroy(json_object_t* obj)
 {
     size_t i = 0;
 
-    while (i < obj->len)
+    if (obj != NULL)
     {
-        json_union_value_destroy(&obj->elements[i].value,
-                                 obj->elements[i].type);
-        free(obj->elements[i].key.value);
-        ++i;
+        while (i < obj->len)
+        {
+            json_union_value_destroy(&obj->elements[i].value,
+                                     obj->elements[i].type);
+            free(obj->elements[i].key.value);
+            ++i;
+        }
+        free(obj->elements);
+        free(obj);
     }
-    free(obj->elements);
-    free(obj);
 }

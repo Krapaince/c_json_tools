@@ -15,12 +15,15 @@ void json_array_destroy(json_array_t* array)
 {
     size_t i = 0;
 
-    while (i < array->len)
+    if (array != NULL)
     {
-        json_union_value_destroy(&array->elements[i].value,
-                                 array->elements[i].type);
-        ++i;
+        while (i < array->len)
+        {
+            json_union_value_destroy(&array->elements[i].value,
+                                     array->elements[i].type);
+            ++i;
+        }
+        free(array->elements);
+        free(array);
     }
-    free(array->elements);
-    free(array);
 }
