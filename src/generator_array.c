@@ -26,6 +26,7 @@ int json_array_generate_to_fd(json_array_t const* array, int fd,
     memset(&generator, 0, sizeof(generator_t));
     json_errno = JSON_E_DEFAULT;
     ret = json_generator_setup(&generator, setting, fd);
+    json_errno_reset();
     if (ret == JSON_EXIT_SUCCESS)
     {
         ret = json_generate_array(&generator, array);

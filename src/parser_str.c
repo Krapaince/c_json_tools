@@ -26,6 +26,7 @@ json_object_t* json_object_parse_from_str(char const* str, size_t* index)
     token_type_t expected = T_L_BRACKET;
 
     json_setup_parser_from_str(&parser, str);
+    json_errno_reset();
     if (json_get_next_token_object(NULL, &parser, &expected) ==
         JSON_EXIT_SUCCESS)
     {
@@ -46,6 +47,7 @@ json_array_t* json_array_parse_from_str(char const* str, size_t* index)
     token_type_t expected = T_L_SQ_BRACKET;
 
     json_setup_parser_from_str(&parser, str);
+    json_errno_reset();
     if (json_get_next_token_array(&parser, &expected) == JSON_EXIT_SUCCESS)
     {
         array = json_parse_array(&parser, &expected);

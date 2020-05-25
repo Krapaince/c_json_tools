@@ -51,6 +51,7 @@ json_object_t* json_object_parse_from_filepath(char const* filepath)
     {
         return obj;
     }
+    json_errno_reset();
     if (json_get_next_token_object(NULL, &parser, &expected) ==
         JSON_EXIT_SUCCESS)
     {
@@ -77,6 +78,7 @@ json_array_t* json_array_parse_from_filepath(char const* filepath)
     {
         return array;
     }
+    json_errno_reset();
     if (json_get_next_token_array(&parser, &expected) == JSON_EXIT_SUCCESS)
     {
         array = json_parse_array(&parser, &expected);

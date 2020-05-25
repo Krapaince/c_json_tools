@@ -26,6 +26,7 @@ int json_object_generate_to_fd(json_object_t const* obj, int fd,
     memset(&generator, 0, sizeof(generator_t));
     json_errno = JSON_E_DEFAULT;
     ret = json_generator_setup(&generator, setting, fd);
+    json_errno_reset();
     if (ret == JSON_EXIT_SUCCESS)
     {
         ret = json_generate_object(&generator, obj);
