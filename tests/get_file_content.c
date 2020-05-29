@@ -13,7 +13,6 @@
 
 static int append_content_to_string(char** str, size_t* str_size,
                                     ssize_t nbytes, char const* content)
-
 {
     char* tmp;
     int ret;

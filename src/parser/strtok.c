@@ -62,9 +62,7 @@ static size_t strtok_len(char const* str, char const* delimiters, char quote,
     escape_character_t const* esc_char;
 
     if (str[0] == quote)
-    {
         return strtok_len_in_quote(str, quote, len_str);
-    }
     while (str[i])
     {
         if (index(delimiters, str[i]) != NULL || str[i] == quote)

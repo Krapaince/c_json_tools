@@ -16,9 +16,7 @@ static json_object_t* test_create_object(void)
     json_array_t* array = json_array_create();
     char* str = strdup("oui");
 
-    cr_assert(object != NULL);
-    cr_assert(sub_object != NULL);
-    cr_assert(str != NULL);
+    cr_assert(object != NULL && sub_object != NULL && str != NULL);
     cr_assert(json_object_append_bool(object, "grominet", true) ==
               JSON_EXIT_SUCCESS);
     cr_assert(json_object_append_nb(object, "titi", -45) == JSON_EXIT_SUCCESS);
