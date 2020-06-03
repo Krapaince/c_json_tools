@@ -6,7 +6,7 @@
 */
 
 #include <error.h>
-#include <generator/write.h>
+#include <generator/generate.h>
 #include <typedef/generator.h>
 
 int json_generate_indent(generator_t* generator)

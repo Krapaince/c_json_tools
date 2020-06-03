@@ -55,11 +55,12 @@ SRC					=	editor/add/array/advanced_type.c			\
 						generator/array.c							\
 						generator/object.c							\
 						generator/setup_teardown.c					\
-						generator/write/basic_type.c				\
-						generator/write/indent.c					\
-						generator/write/token.c						\
-						generator/write/union.c						\
-						generator/write.c							\
+						generator/generate/basic_type.c				\
+						generator/generate/indent.c					\
+						generator/generate/token.c					\
+						generator/generate/union.c					\
+						generator/buffer.c							\
+						generator/output.c							\
 						generator_array.c							\
 						generator_object.c							\
 						getters/index/array/advanced_type.c			\

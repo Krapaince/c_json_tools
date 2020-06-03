@@ -6,7 +6,7 @@
 */
 
 #include <error.h>
-#include <generator/write.h>
+#include <generator/generate.h>
 #include <typedef/array.h>
 #include <typedef/generator.h>
 

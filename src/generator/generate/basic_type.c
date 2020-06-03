@@ -10,7 +10,7 @@
 
 #include <error.h>
 #include <escape_character.h>
-#include <generator/write.h>
+#include <generator/generate.h>
 #include <typedef/escape_character.h>
 #include <typedef/generator.h>
 #include <typedef/type.h>

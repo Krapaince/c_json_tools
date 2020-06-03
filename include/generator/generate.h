@@ -2,11 +2,11 @@
 ** EPITECH PROJECT, 2020
 ** json library
 ** File description:
-** write
+** generator generate
 */
 
-#ifndef JSON_GENERATOR_WRITE_H_
-#define JSON_GENERATOR_WRITE_H_
+#ifndef JSON_GENERATOR_GENERATE_H_
+#define JSON_GENERATOR_GENERATE_H_
 
 #include <typedef/generator.h>
 #include <typedef/token.h>
@@ -43,4 +43,4 @@ int json_generate_indent(generator_t* generator);
 int json_generate_space(generator_t* generator);
 int json_generate_new_line(generator_t* generator);
 
-#endif /* !JSON_GENERATOR_WRITE_H_ */
+#endif /* !JSON_GENERATOR_GENERATE_H_ */
