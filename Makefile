@@ -118,6 +118,7 @@ SRC_TEST			=	editor/append.c						\
 						editor/unset/value/array.c			\
 						editor/unset/object.c				\
 						get_file_content.c					\
+						generator/str.c						\
 						getters/index/array.c				\
 						getters/index/object.c				\
 						getters/key/object.c				\
