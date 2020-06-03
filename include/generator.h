@@ -11,8 +11,11 @@
 #include <typedef/generator.h>
 #include <typedef/object.h>
 
-int json_generator_setup(generator_t* generator,
-                         generator_setting_t const* user_setting, int fd);
+int json_generator_setup_string(generator_t* generator,
+                                generator_setting_t const* user_setting);
+
+int json_generator_setup_file(generator_t* generator,
+                              generator_setting_t const* user_setting, int fd);
 
 void json_generator_teardown(generator_t* generator);
 

@@ -23,9 +23,8 @@ int json_array_generate_to_fd(json_array_t const* array, int fd,
     generator_t generator;
     int ret;
 
-    memset(&generator, 0, sizeof(generator_t));
     json_errno = JSON_E_DEFAULT;
-    ret = json_generator_setup(&generator, setting, fd);
+    ret = json_generator_setup_file(&generator, setting, fd);
     json_errno_reset();
     if (ret == JSON_EXIT_SUCCESS)
     {
@@ -55,5 +54,32 @@ int json_array_generate_to_file(json_array_t const* array, char const* filepath,
         ret = json_array_generate_to_fd(array, fd, setting);
         close(fd);
     }
+    return ret;
+}
+
+int json_array_generate_to_string(json_array_t const* array,
+                                  generator_setting_t const* setting,
+                                  char** strptr)
+{
+    generator_t generator;
+    int ret;
+
+    json_errno_reset();
+    ret = json_generator_setup_string(&generator, setting);
+    if (ret != JSON_EXIT_SUCCESS)
+    {
+        return ret;
+    }
+    ret = json_generate_array(&generator, array);
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        ret = json_write(&generator);
+        if (ret == JSON_EXIT_SUCCESS)
+        {
+            *strptr = generator.output.str;
+            generator.output.str = NULL;
+        }
+    }
+    json_generator_teardown(&generator);
     return ret;
 }
