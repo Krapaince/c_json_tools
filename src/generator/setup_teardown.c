@@ -38,14 +38,14 @@ static int json_setup_indent(generator_t* generator,
     return ret;
 }
 
-int json_generator_setup(generator_t* generator,
-                         generator_setting_t const* user_setting, int fd)
+static int json_generator_setup(generator_t* generator,
+                                generator_setting_t const* user_setting)
 {
-    size_t const buffer_size = 4096;
-    write_buffer_t* buffer = &generator->buffer;
+    generator_buffer_t* buffer = &generator->buffer;
     int ret = JSON_EXIT_SUCCESS;
 
-    buffer->value = malloc(sizeof(char) * buffer_size);
+    memset(generator, 0, sizeof(generator_t));
+    buffer->value = malloc(sizeof(char) * GENERATOR_BUFFER_SIZE);
     if (buffer->value == NULL)
     {
         json_errno = JSON_E_SYS_FAILURE;
@@ -53,10 +53,9 @@ int json_generator_setup(generator_t* generator,
     }
     else
     {
-        generator->fd = fd;
         generator->depth = 0;
         buffer->len = 0;
-        buffer->len_alloc = buffer_size;
+        buffer->len_alloc = GENERATOR_BUFFER_SIZE;
         ret = json_setup_indent(generator, user_setting);
         if (ret != JSON_EXIT_SUCCESS)
         {
@@ -66,8 +65,40 @@ int json_generator_setup(generator_t* generator,
     return ret;
 }
 
+int json_generator_setup_file(generator_t* generator,
+                              generator_setting_t const* user_setting, int fd)
+{
+    int ret = json_generator_setup(generator, user_setting);
+
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        generator->output.type = GENERATOR_OUTPUT_FILE;
+        generator->output.fd = fd;
+    }
+    return ret;
+}
+
+int json_generator_setup_string(generator_t* generator,
+                                generator_setting_t const* user_setting)
+{
+    int ret = json_generator_setup(generator, user_setting);
+
+    if (ret == JSON_EXIT_SUCCESS)
+    {
+        generator->output.type = GENERATOR_OUTPUT_STRING;
+        generator->output.str = NULL;
+        generator->output.len = 0;
+        generator->output.len_alloc = 0;
+    }
+    return ret;
+}
+
 void json_generator_teardown(generator_t* generator)
 {
     free(generator->indent);
     free(generator->buffer.value);
+    if (generator->output.type == GENERATOR_OUTPUT_STRING)
+    {
+        free(generator->output.str);
+    }
 }
