@@ -31,7 +31,7 @@ int json_object_generate_to_fd(json_object_t const* obj, int fd,
         ret = json_generate_object(&generator, obj);
         if (ret == JSON_EXIT_SUCCESS)
         {
-            ret = json_write(&generator);
+            ret = json_generate_to_output(&generator);
         }
         json_generator_teardown(&generator);
     }
@@ -73,7 +73,7 @@ int json_object_generate_to_string(json_object_t const* object,
     ret = json_generate_object(&generator, object);
     if (ret == JSON_EXIT_SUCCESS)
     {
-        ret = json_write(&generator);
+        ret = json_generate_to_output(&generator);
         if (ret == JSON_EXIT_SUCCESS)
         {
             *strptr = generator.output.str;

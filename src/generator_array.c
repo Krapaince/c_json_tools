@@ -31,7 +31,7 @@ int json_array_generate_to_fd(json_array_t const* array, int fd,
         ret = json_generate_array(&generator, array);
         if (ret == JSON_EXIT_SUCCESS)
         {
-            ret = json_write(&generator);
+            ret = json_generate_to_output(&generator);
         }
         json_generator_teardown(&generator);
     }
@@ -73,7 +73,7 @@ int json_array_generate_to_string(json_array_t const* array,
     ret = json_generate_array(&generator, array);
     if (ret == JSON_EXIT_SUCCESS)
     {
-        ret = json_write(&generator);
+        ret = json_generate_to_output(&generator);
         if (ret == JSON_EXIT_SUCCESS)
         {
             *strptr = generator.output.str;

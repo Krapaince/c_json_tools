@@ -12,33 +12,35 @@
 #include <typedef/token.h>
 #include <typedef/type.h>
 
-// flushs the buffer of generator
+// Flushs the buffer to the output.
 //
 // Return:
 //   Failure: JSON_EXIT_FAILURE
 //   Success: JSON_EXIT_SUCCESS
 //
-// set json_errno in case of failure
-int json_write(generator_t* generator);
+// Set json_errno in case of failure.
+int json_generate_to_output(generator_t* generator);
 
-// appends to the buffer of generator and flushs it if necessary
+// Appends to the buffer of generator and flushs it if necessary.
 //
 // Return:
 //   Failure: JSON_EXIT_FAILURE
 //   Success: JSON_EXIT_SUCCESS
 //
-// set json_errno in case of failure
+// Set json_errno in case of failure.
 //
-int json_write_buffer(generator_t* generator, char const* str, size_t len);
+int json_generate_to_buffer(generator_t* generator, char const* str,
+                            size_t len);
 
-int json_write_nb(generator_t* generator, int nb);
-int json_write_str(generator_t* generator, str_t const* str);
-int json_write_type(generator_t* generator, token_type_t type);
-int json_write_union_value(generator_t* generator,
-                           json_union_value_t const* value, json_type_t type);
+int json_generate_nb(generator_t* generator, int nb);
+int json_generate_str(generator_t* generator, str_t const* str);
+int json_generate_type(generator_t* generator, token_type_t type);
+int json_generate_union_value(generator_t* generator,
+                              json_union_value_t const* value,
+                              json_type_t type);
 
-int json_write_indent(generator_t* generator);
-int json_write_space(generator_t* generator);
-int json_write_new_line(generator_t* generator);
+int json_generate_indent(generator_t* generator);
+int json_generate_space(generator_t* generator);
+int json_generate_new_line(generator_t* generator);
 
 #endif /* !JSON_GENERATOR_WRITE_H_ */

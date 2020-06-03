@@ -57,7 +57,7 @@ static int json_generate_append_to_output(generator_t* generator)
     return JSON_EXIT_SUCCESS;
 }
 
-int json_write(generator_t* generator)
+int json_generate_to_output(generator_t* generator)
 {
     int ret;
 
@@ -72,7 +72,7 @@ int json_write(generator_t* generator)
     return ret;
 }
 
-int json_write_buffer(generator_t* generator, char const* str, size_t len)
+int json_generate_to_buffer(generator_t* generator, char const* str, size_t len)
 {
     int ret = JSON_EXIT_SUCCESS;
     generator_buffer_t* buffer = &generator->buffer;
@@ -94,7 +94,7 @@ int json_write_buffer(generator_t* generator, char const* str, size_t len)
             len -= remaining_space;
             pos += remaining_space;
             buffer->len += remaining_space;
-            ret = json_write(generator);
+            ret = json_generate_to_output(generator);
             buffer->len = 0;
         }
     }
