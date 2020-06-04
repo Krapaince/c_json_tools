@@ -76,8 +76,8 @@ int json_array_generate_to_string(json_array_t const* array,
         ret = json_generate_to_output(&generator);
         if (ret == JSON_EXIT_SUCCESS)
         {
-            *strptr = generator.output.str;
-            generator.output.str = NULL;
+            *strptr = generator.buffer.value;
+            generator.buffer.value = NULL;
         }
     }
     json_generator_teardown(&generator);
