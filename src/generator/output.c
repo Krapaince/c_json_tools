@@ -46,6 +46,7 @@ static int json_generate_append_to_output(generator_t* generator)
     }
     else
     {
+        memset(&temp[buffer->len_alloc], 0, GENERATOR_BUFFER_SIZE + 1);
         buffer->value = temp;
         buffer->len_alloc += GENERATOR_BUFFER_SIZE;
         ret = JSON_EXIT_SUCCESS;
