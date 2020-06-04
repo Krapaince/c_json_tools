@@ -24,12 +24,6 @@ typedef struct
     union
     {
         int fd;
-        struct
-        {
-            char* str;
-            size_t len;
-            size_t len_alloc;
-        };
     };
 } generator_output_t;
 

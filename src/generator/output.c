@@ -33,28 +33,24 @@ static int json_generate_write_to_output(generator_t* generator)
 
 static int json_generate_append_to_output(generator_t* generator)
 {
+    int ret;
     generator_buffer_t* buffer = &generator->buffer;
-    generator_output_t* output = &generator->output;
-    char* temp = NULL;
-    size_t left_space = output->len_alloc - output->len;
+    char* temp =
+        realloc(buffer->value,
+                sizeof(char) * (buffer->len_alloc + GENERATOR_BUFFER_SIZE + 1));
 
-    if (left_space < buffer->len)
+    if (temp == NULL)
     {
-        temp = realloc(output->str, sizeof(char) * (output->len_alloc +
-                                                    GENERATOR_BUFFER_SIZE + 1));
-        if (temp == NULL)
-        {
-            json_errno = JSON_E_SYS_FAILURE;
-            return JSON_EXIT_FAILURE;
-        }
-        output->str = temp;
-        output->len_alloc += GENERATOR_BUFFER_SIZE;
+        json_errno = JSON_E_SYS_FAILURE;
+        ret = JSON_EXIT_FAILURE;
     }
-    memcpy(&output->str[output->len], buffer->value, buffer->len);
-    output->len += buffer->len;
-    output->str[output->len] = '\0';
-    buffer->len = 0;
-    return JSON_EXIT_SUCCESS;
+    else
+    {
+        buffer->value = temp;
+        buffer->len_alloc += GENERATOR_BUFFER_SIZE;
+        ret = JSON_EXIT_SUCCESS;
+    }
+    return ret;
 }
 
 int json_generate_to_output(generator_t* generator)

@@ -8,8 +8,8 @@
 #include <string.h>
 
 #include <error.h>
-#include <typedef/generator.h>
 #include <generator/generate.h>
+#include <typedef/generator.h>
 
 int json_generate_to_buffer(generator_t* generator, char const* str, size_t len)
 {
@@ -34,7 +34,6 @@ int json_generate_to_buffer(generator_t* generator, char const* str, size_t len)
             pos += remaining_space;
             buffer->len += remaining_space;
             ret = json_generate_to_output(generator);
-            buffer->len = 0;
         }
     }
     return ret;

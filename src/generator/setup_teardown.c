@@ -45,7 +45,7 @@ static int json_generator_setup(generator_t* generator,
     int ret = JSON_EXIT_SUCCESS;
 
     memset(generator, 0, sizeof(generator_t));
-    buffer->value = malloc(sizeof(char) * GENERATOR_BUFFER_SIZE);
+    buffer->value = calloc((GENERATOR_BUFFER_SIZE + 1), sizeof(char));
     if (buffer->value == NULL)
     {
         json_errno = JSON_E_SYS_FAILURE;
@@ -86,9 +86,6 @@ int json_generator_setup_string(generator_t* generator,
     if (ret == JSON_EXIT_SUCCESS)
     {
         generator->output.type = GENERATOR_OUTPUT_STRING;
-        generator->output.str = NULL;
-        generator->output.len = 0;
-        generator->output.len_alloc = 0;
     }
     return ret;
 }
@@ -97,8 +94,4 @@ void json_generator_teardown(generator_t* generator)
 {
     free(generator->indent);
     free(generator->buffer.value);
-    if (generator->output.type == GENERATOR_OUTPUT_STRING)
-    {
-        free(generator->output.str);
-    }
 }
