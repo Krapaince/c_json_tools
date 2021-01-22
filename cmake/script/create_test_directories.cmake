@@ -1,0 +1,3 @@
+set(PROJECT_SOURCE_DIR ${CMAKE_ARGV3})
+file(MAKE_DIRECTORY ${PROJECT_SOURCE_DIR}/tests/output/obj)
+file(MAKE_DIRECTORY ${PROJECT_SOURCE_DIR}/tests/output/array)

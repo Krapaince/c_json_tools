@@ -3,8 +3,12 @@ cmake_minimum_required(VERSION 3.19.2)
 find_package(Doxygen REQUIRED)
 find_package(Sphinx REQUIRED)
 
-if (NOT Doxygen_FOUND OR NOT Sphinx_FOUND)
-    return()
+if (NOT Doxygen_FOUND)
+    message(FATAL_ERROR "Doxygen not found! Aborting...")
+endif()
+
+if (NOT Sphinx_FOUND)
+    message(FATAL_ERROR "Sphinx not found! Aborting...")
 endif()
 
 get_target_property(C_DOC_WITH_CMAKE_HEADERS krapaince-c-json-tools INTERFACE_INCLUDE_DIRECTORIES)
