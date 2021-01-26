@@ -10,8 +10,8 @@
 // and both *value and the object's value are left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_object_extract_bool_by_key(json_object_t* obj, char const* key,
                                     bool* value);
@@ -22,8 +22,8 @@ int json_object_extract_bool_by_key(json_object_t* obj, char const* key,
 // and both *value and the object's value are left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_object_extract_nb_by_key(json_object_t* obj, char const* key,
                                   int* value);
@@ -36,8 +36,8 @@ int json_object_extract_nb_by_key(json_object_t* obj, char const* key,
 // untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_object_extract_string_by_key(json_object_t* obj, char const* key,
                                       char** value);
@@ -50,8 +50,8 @@ int json_object_extract_string_by_key(json_object_t* obj, char const* key,
 // untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_object_extract_str_by_key(json_object_t* obj, char const* key,
                                    str_t* value);
@@ -64,8 +64,8 @@ int json_object_extract_str_by_key(json_object_t* obj, char const* key,
 // untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_object_extract_object_by_key(json_object_t* obj, char const* key,
                                       json_object_t** value);
@@ -78,8 +78,8 @@ int json_object_extract_object_by_key(json_object_t* obj, char const* key,
 // untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_object_extract_array_by_key(json_object_t* obj, char const* key,
                                      json_array_t** value);

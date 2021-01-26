@@ -11,8 +11,8 @@
 // array's element are left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_object_extract_element_by_index_and_type(
     json_object_t* object, size_t index, json_type_t type,

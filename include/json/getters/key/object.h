@@ -9,8 +9,8 @@
 // the *value is set with the element and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_const_element_by_key(json_object_t const* obj,
                                          char const* key,
@@ -21,8 +21,8 @@ int json_object_get_const_element_by_key(json_object_t const* obj,
 // Otherwise the value is set with the value and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_bool_by_key(json_object_t const* obj, char const* key,
                                 bool* value);
@@ -32,8 +32,8 @@ int json_object_get_bool_by_key(json_object_t const* obj, char const* key,
 // Otherwise the value is set with the value and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_nb_by_key(json_object_t const* obj, char const* key,
                               int* value);
@@ -43,8 +43,8 @@ int json_object_get_nb_by_key(json_object_t const* obj, char const* key,
 // Otherwise the value is set with the value and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_null_by_key(json_object_t const* obj, char const* key,
                                 void const** value);
@@ -54,8 +54,8 @@ int json_object_get_null_by_key(json_object_t const* obj, char const* key,
 // Otherwise the value is set with the value and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_string_by_key(json_object_t const* obj, char const* key,
                                   char const** value);
@@ -65,8 +65,8 @@ int json_object_get_string_by_key(json_object_t const* obj, char const* key,
 // Otherwise the value is set with the value and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_str_by_key(json_object_t const* obj, char const* key,
                                str_t const** value);
@@ -76,8 +76,8 @@ int json_object_get_str_by_key(json_object_t const* obj, char const* key,
 // Otherwise the value is set with the value and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_object_by_key(json_object_t const* obj, char const* key,
                                   json_object_t const** value);
@@ -87,8 +87,8 @@ int json_object_get_object_by_key(json_object_t const* obj, char const* key,
 // Otherwise the value is set with the value and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_array_by_key(json_object_t const* obj, char const* key,
                                  json_array_t const** value);

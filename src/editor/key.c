@@ -12,12 +12,12 @@ int json_assign_key_to_element(json_object_element_t* element, char const* key)
     element->key.value = strdup(key);
     if (element->key.value)
     {
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
         json_errno = JSON_E_SYS_FAILURE;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }
@@ -31,7 +31,7 @@ int json_assign_key_to_element_safe(json_object_t const* obj,
     if (json_object_does_key_exist(obj, key))
     {
         json_errno = JSON_E_KEY_ALREADY_EXIST;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {

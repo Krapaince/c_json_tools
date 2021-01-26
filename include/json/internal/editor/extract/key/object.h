@@ -12,8 +12,8 @@
 // untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_object_extract_element_by_key_and_type(json_object_t* obj,
                                                 char const* key,

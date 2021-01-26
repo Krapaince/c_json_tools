@@ -38,7 +38,7 @@ static void json_generate_object_teardown_context(generator_t* generator,
 int json_generate_object(generator_t* generator, json_object_t const* obj)
 {
     size_t i = 0;
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     json_generate_object_setup_context(generator, obj);
     while (i < obj->len)
@@ -54,7 +54,7 @@ int json_generate_object(generator_t* generator, json_object_t const* obj)
     json_generate_object_teardown_context(generator, obj);
     if (json_errno != JSON_E_DEFAULT)
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }

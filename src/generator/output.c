@@ -14,12 +14,12 @@ static int json_generate_write_to_output(generator_t* generator)
     if (nbytes != (ssize_t)buffer->len)
     {
         json_errno = JSON_E_SYS_FAILURE;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
         generator->buffer.len = 0;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     return ret;
 }
@@ -35,14 +35,14 @@ static int json_generate_append_to_output(generator_t* generator)
     if (temp == NULL)
     {
         json_errno = JSON_E_SYS_FAILURE;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
         memset(&temp[buffer->len_alloc], 0, GENERATOR_BUFFER_SIZE + 1);
         buffer->value = temp;
         buffer->len_alloc += GENERATOR_BUFFER_SIZE;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     return ret;
 }

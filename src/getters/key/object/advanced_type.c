@@ -9,7 +9,7 @@ int json_object_get_object_by_key(json_object_t const* obj, char const* key,
     int ret = json_object_get_const_element_by_key_and_type(obj, key, JSON_OBJ,
                                                             &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.obj;
     }
@@ -23,7 +23,7 @@ int json_object_get_array_by_key(json_object_t const* obj, char const* key,
     int ret = json_object_get_const_element_by_key_and_type(
         obj, key, JSON_ARRAY, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.array;
     }

@@ -11,12 +11,12 @@ static int json_array_get_const_element_by_index(
     if (index < array->len)
     {
         *element = &array->elements[index];
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
         *element = NULL;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }
@@ -27,12 +27,12 @@ int json_array_get_const_element_by_index_and_type(
 {
     int ret = json_array_get_const_element_by_index(array, index, element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         if (json_array_compare_element_type(*element, type) == false)
         {
             *element = NULL;
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;
@@ -46,12 +46,12 @@ int json_array_get_element_by_index(json_array_t* array, size_t index,
     if (index < array->len)
     {
         *element = &array->elements[index];
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
         *element = NULL;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }

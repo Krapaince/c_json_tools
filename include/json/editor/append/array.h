@@ -8,8 +8,8 @@
 // The array size is increase if the array is to small.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_append_bool(json_array_t* array, bool value);
 
@@ -17,8 +17,8 @@ int json_array_append_bool(json_array_t* array, bool value);
 // The array size is increase if the array is to small.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_append_nb(json_array_t* array, int value);
 
@@ -26,8 +26,8 @@ int json_array_append_nb(json_array_t* array, int value);
 // The array size is increase if the array is to small.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_append_str_dup(json_array_t* array, char const* value);
 
@@ -36,8 +36,8 @@ int json_array_append_str_dup(json_array_t* array, char const* value);
 // The array size is increase if the array is to small.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_append_str(json_array_t* array, char* value);
 
@@ -45,8 +45,8 @@ int json_array_append_str(json_array_t* array, char* value);
 // The array size is increase if the array is to small.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_append_null(json_array_t* array);
 
@@ -55,8 +55,8 @@ int json_array_append_null(json_array_t* array);
 // The array size is increase if the array is to small.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_append_array(json_array_t* array, json_array_t* value);
 
@@ -65,8 +65,8 @@ int json_array_append_array(json_array_t* array, json_array_t* value);
 // The array size is increase if the array is to small.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_append_object(json_array_t* array, json_object_t* value);
 

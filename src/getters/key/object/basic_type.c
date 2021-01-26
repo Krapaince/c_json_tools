@@ -9,7 +9,7 @@ int json_object_get_bool_by_key(json_object_t const* obj, char const* key,
     int ret = json_object_get_const_element_by_key_and_type(obj, key, JSON_BOOL,
                                                             &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.boolean;
     }
@@ -23,7 +23,7 @@ int json_object_get_nb_by_key(json_object_t const* obj, char const* key,
     int ret = json_object_get_const_element_by_key_and_type(obj, key, JSON_NB,
                                                             &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.nb;
     }
@@ -37,7 +37,7 @@ int json_object_get_string_by_key(json_object_t const* obj, char const* key,
     int ret = json_object_get_const_element_by_key_and_type(obj, key, JSON_STR,
                                                             &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.str.value;
     }
@@ -51,7 +51,7 @@ int json_object_get_str_by_key(json_object_t const* obj, char const* key,
     int ret = json_object_get_const_element_by_key_and_type(obj, key, JSON_STR,
                                                             &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = &element->value.str;
     }
@@ -65,7 +65,7 @@ int json_object_get_null_by_key(json_object_t const* obj, char const* key,
     int ret = json_object_get_const_element_by_key_and_type(obj, key, JSON_NULL,
                                                             &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.null;
     }

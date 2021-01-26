@@ -19,10 +19,10 @@ int json_array_generate_to_fd(json_array_t const* array, int fd,
     json_errno = JSON_E_DEFAULT;
     ret = json_generator_setup_file(&generator, setting, fd);
     json_errno_reset();
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         ret = json_generate_array(&generator, array);
-        if (ret == JSON_EXIT_SUCCESS)
+        if (ret == JSON_ES)
         {
             ret = json_generate_to_output(&generator);
         }
@@ -40,7 +40,7 @@ int json_array_generate_to_file(json_array_t const* array, char const* filepath,
     if (fd == -1)
     {
         json_errno = JSON_E_SYS_FAILURE;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
@@ -59,15 +59,15 @@ int json_array_generate_to_string(json_array_t const* array,
 
     json_errno_reset();
     ret = json_generator_setup_string(&generator, setting);
-    if (ret != JSON_EXIT_SUCCESS)
+    if (ret != JSON_ES)
     {
         return ret;
     }
     ret = json_generate_array(&generator, array);
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         ret = json_generate_to_output(&generator);
-        if (ret == JSON_EXIT_SUCCESS)
+        if (ret == JSON_ES)
         {
             *strptr = generator.buffer.value;
             generator.buffer.value = NULL;

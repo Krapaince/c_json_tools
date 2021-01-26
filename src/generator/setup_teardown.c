@@ -6,7 +6,7 @@
 static int json_setup_indent(generator_t* generator,
                              generator_setting_t const* user_setting)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
     generator_setting_t setting = {SPACE, 4};
 
     if (user_setting)
@@ -25,7 +25,7 @@ static int json_setup_indent(generator_t* generator,
         else
         {
             json_errno = JSON_E_SYS_FAILURE;
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;
@@ -35,14 +35,14 @@ static int json_generator_setup(generator_t* generator,
                                 generator_setting_t const* user_setting)
 {
     generator_buffer_t* buffer = &generator->buffer;
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     memset(generator, 0, sizeof(generator_t));
     buffer->value = calloc((GENERATOR_BUFFER_SIZE + 1), sizeof(char));
     if (buffer->value == NULL)
     {
         json_errno = JSON_E_SYS_FAILURE;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
@@ -50,7 +50,7 @@ static int json_generator_setup(generator_t* generator,
         buffer->len = 0;
         buffer->len_alloc = GENERATOR_BUFFER_SIZE;
         ret = json_setup_indent(generator, user_setting);
-        if (ret != JSON_EXIT_SUCCESS)
+        if (ret != JSON_ES)
         {
             free(buffer->value);
         }
@@ -63,7 +63,7 @@ int json_generator_setup_file(generator_t* generator,
 {
     int ret = json_generator_setup(generator, user_setting);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         generator->output.type = GENERATOR_OUTPUT_FILE;
         generator->output.fd = fd;
@@ -76,7 +76,7 @@ int json_generator_setup_string(generator_t* generator,
 {
     int ret = json_generator_setup(generator, user_setting);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         generator->output.type = GENERATOR_OUTPUT_STRING;
     }

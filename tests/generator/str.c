@@ -14,8 +14,7 @@ Test(json_array_generate_to_string, test_json_array_generate_to_string)
 
     cr_assert(array != NULL);
     expected = get_file_content(filepath);
-    cr_assert(json_array_generate_to_string(array, &setting, &str) ==
-              JSON_EXIT_SUCCESS);
+    cr_assert(json_array_generate_to_string(array, &setting, &str) == JSON_ES);
     cr_expect(strcmp(str, expected) == 0);
     json_array_destroy(array);
     free(expected);
@@ -33,7 +32,7 @@ Test(json_object_generate_to_string, test_json_object_generate_to_string)
     cr_assert(object != NULL);
     expected = get_file_content(filepath);
     cr_assert(json_object_generate_to_string(object, &setting, &str) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
     cr_expect(strcmp(str, expected) == 0);
     json_object_destroy(object);
     free(expected);

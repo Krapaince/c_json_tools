@@ -8,8 +8,8 @@
 // *index is set and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_index_by_key(json_object_t const* obj, char const* key,
                                  size_t* index);
@@ -19,8 +19,8 @@ int json_object_get_index_by_key(json_object_t const* obj, char const* key,
 // the ptr is set with the element and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_const_element_by_key(json_object_t const* obj,
                                          char const* key,
@@ -31,8 +31,8 @@ int json_object_get_const_element_by_key(json_object_t const* obj,
 // the ptr is set with the element and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_const_element_by_key_and_type(
     json_object_t const* obj, char const* key, json_type_t type,
@@ -43,8 +43,8 @@ int json_object_get_const_element_by_key_and_type(
 // the *ptr is set with the element and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_element_by_key(json_object_t* obj, char const* key,
                                    json_object_element_t** ptr);
@@ -54,8 +54,8 @@ int json_object_get_element_by_key(json_object_t* obj, char const* key,
 // the ptr is set with the element and the function success.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_get_element_by_key_and_type(json_object_t* obj, char const* key,
                                             json_type_t type,

@@ -9,7 +9,7 @@ int json_object_extract_bool_by_index(json_object_t* object, size_t index,
     int ret = json_object_extract_element_by_index_and_type(
         object, index, JSON_BOOL, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.boolean;
     }
@@ -23,7 +23,7 @@ int json_object_extract_nb_by_index(json_object_t* object, size_t index,
     int ret = json_object_extract_element_by_index_and_type(object, index,
                                                             JSON_NB, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.nb;
     }
@@ -37,7 +37,7 @@ int json_object_extract_string_by_index(json_object_t* object, size_t index,
     int ret = json_object_extract_element_by_index_and_type(object, index,
                                                             JSON_STR, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.str.value;
     }
@@ -51,7 +51,7 @@ int json_object_extract_str_by_index(json_object_t* object, size_t index,
     int ret = json_object_extract_element_by_index_and_type(object, index,
                                                             JSON_STR, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.str;
     }

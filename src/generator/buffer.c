@@ -6,12 +6,12 @@
 
 int json_generate_to_buffer(generator_t* generator, char const* str, size_t len)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
     generator_buffer_t* buffer = &generator->buffer;
     size_t remaining_space;
     size_t pos = 0;
 
-    while (len && ret == JSON_EXIT_SUCCESS)
+    while (len && ret == JSON_ES)
     {
         remaining_space = buffer->len_alloc - buffer->len;
         if (len <= remaining_space)

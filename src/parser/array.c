@@ -13,7 +13,7 @@ int json_get_next_token_array(parser_t* parser, token_type_t* expected)
 {
     int ret = json_parser_find_next_type(parser, *expected);
 
-    if (ret != JSON_EXIT_SUCCESS)
+    if (ret != JSON_ES)
     {
         return ret;
     }
@@ -23,7 +23,7 @@ int json_get_next_token_array(parser_t* parser, token_type_t* expected)
 static int json_add_type_array(json_array_t* array, parser_t* parser)
 {
     size_t i = 0;
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
     token_type_t const types[] = {T_BOOL, T_NB, T_STR, T_NULL, T_ERROR};
     int (*const fct_ptr[])(json_array_t * obj, token_t * token) = {
         json_parser_array_append_bool, json_parser_array_append_nb,
@@ -44,7 +44,7 @@ static int json_add_type_array(json_array_t* array, parser_t* parser)
 static int json_treat_token_array(json_array_t* array, parser_t* parser,
                                   token_type_t* expected)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     if (parser->token.type & T_TYPE)
     {
@@ -81,13 +81,13 @@ json_array_t* json_parse_array(parser_t* parser, token_type_t* expected)
     while (parser->token.type != T_R_SQ_BRACKET && json_errno == JSON_E_DEFAULT)
     {
         ret = json_get_next_token_array(parser, expected);
-        if (ret != JSON_EXIT_SUCCESS)
+        if (ret != JSON_ES)
         {
             json_array_destroy(array);
             return NULL;
         }
         ret = json_treat_token_array(array, parser, expected);
-        if (ret != JSON_EXIT_SUCCESS)
+        if (ret != JSON_ES)
         {
             json_array_destroy(array);
             return NULL;

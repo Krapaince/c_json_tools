@@ -9,25 +9,25 @@
 // catch for the invalid eof.
 static int json_does_eof_is_valid(parser_t* parser, void* json_ptr)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     if (json_ptr == NULL && json_errno == JSON_E_END_OF_FILE)
     {
         json_errno = JSON_E_INVALID_EOF;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else if (json_ptr)
     {
         ret = json_parser_find_next_type(parser, T_ERROR);
-        if (ret == JSON_EXIT_FAILURE && json_errno == JSON_E_END_OF_FILE)
+        if (ret == JSON_EF && json_errno == JSON_E_END_OF_FILE)
         {
             json_errno_reset();
-            ret = JSON_EXIT_SUCCESS;
+            ret = JSON_ES;
         }
         else
         {
             json_errno = JSON_E_INVALID_EOF;
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;
@@ -40,18 +40,17 @@ json_object_t* json_object_parse_from_filepath(char const* filepath)
     token_type_t expected = T_L_BRACKET;
     int ret = json_setup_parser_from_filepath(&parser, filepath);
 
-    if (ret == JSON_EXIT_FAILURE)
+    if (ret == JSON_EF)
     {
         return obj;
     }
     json_errno_reset();
-    if (json_get_next_token_object(NULL, &parser, &expected) ==
-        JSON_EXIT_SUCCESS)
+    if (json_get_next_token_object(NULL, &parser, &expected) == JSON_ES)
     {
         obj = json_parse_object(&parser, &expected);
     }
     ret = json_does_eof_is_valid(&parser, obj);
-    if (ret != JSON_EXIT_SUCCESS && obj)
+    if (ret != JSON_ES && obj)
     {
         json_object_destroy(obj);
         obj = NULL;
@@ -67,17 +66,17 @@ json_array_t* json_array_parse_from_filepath(char const* filepath)
     token_type_t expected = T_L_SQ_BRACKET;
     int ret = json_setup_parser_from_filepath(&parser, filepath);
 
-    if (ret == JSON_EXIT_FAILURE)
+    if (ret == JSON_EF)
     {
         return array;
     }
     json_errno_reset();
-    if (json_get_next_token_array(&parser, &expected) == JSON_EXIT_SUCCESS)
+    if (json_get_next_token_array(&parser, &expected) == JSON_ES)
     {
         array = json_parse_array(&parser, &expected);
     }
     ret = json_does_eof_is_valid(&parser, array);
-    if (ret != JSON_EXIT_SUCCESS && array)
+    if (ret != JSON_ES && array)
     {
         json_array_destroy(array);
         array = NULL;

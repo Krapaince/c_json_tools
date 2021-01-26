@@ -10,7 +10,7 @@ int json_array_extract_element_by_index_and_type(json_array_t* array,
     json_array_element_t* found_elem = NULL;
     int ret = json_array_get_element_by_index(array, index, &found_elem);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         if (json_array_compare_element_type(found_elem, type))
         {
@@ -20,7 +20,7 @@ int json_array_extract_element_by_index_and_type(json_array_t* array,
         }
         else
         {
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;

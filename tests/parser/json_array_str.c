@@ -24,7 +24,7 @@ Test(json_array_parse_from_str, test_json_parse_araay_from_array_valid)
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_array_generate_to_file(array,
                                           "tests/output/array/valid_str.json",
-                                          &setting) == JSON_EXIT_SUCCESS);
+                                          &setting) == JSON_ES);
     output = fopen("tests/output/array/valid_str.json", "r");
     cr_assert(expected != NULL && output != NULL);
     cr_expect_file_contents_eq(output, expected);

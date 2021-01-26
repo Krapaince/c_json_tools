@@ -19,9 +19,8 @@ Test(json_object_parse_from_fd, test_json_parse_obj_from_filepath_valid)
 
     cr_assert(obj != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
-    cr_assert(json_object_generate_to_file(obj,
-                                           "tests/output/obj/valid_fd.json",
-                                           &setting) == JSON_EXIT_SUCCESS);
+    cr_assert(json_object_generate_to_file(
+                  obj, "tests/output/obj/valid_fd.json", &setting) == JSON_ES);
     output = fopen("tests/output/obj/valid_fd.json", "r");
     cr_assert(expected != NULL);
     cr_assert(output != NULL);

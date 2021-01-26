@@ -12,7 +12,7 @@ int json_object_set_bool_by_key(json_object_t* obj, char const* key, bool value)
     json_object_element_t* element;
     int ret = json_object_get_element_by_key(obj, key, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_BOOL;
@@ -30,7 +30,7 @@ int json_object_set_nb_by_key(json_object_t* obj, char const* key, int value)
     json_object_element_t* element;
     int ret = json_object_get_element_by_key(obj, key, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_NB;
@@ -50,7 +50,7 @@ int json_object_set_str_dup_by_key(json_object_t* obj, char const* key,
     int ret = json_object_get_element_by_key(obj, key, &element);
     char* dup_value;
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         dup_value = strdup(value);
         if (dup_value)
@@ -63,7 +63,7 @@ int json_object_set_str_dup_by_key(json_object_t* obj, char const* key,
         else
         {
             json_errno = JSON_E_SYS_FAILURE;
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     else
@@ -78,7 +78,7 @@ int json_object_set_str_by_key(json_object_t* obj, char const* key, char* value)
     json_object_element_t* element;
     int ret = json_object_get_element_by_key(obj, key, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_STR;
@@ -97,7 +97,7 @@ int json_object_set_null_by_key(json_object_t* obj, char const* key)
     json_object_element_t* element;
     int ret = json_object_get_element_by_key(obj, key, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_NULL;

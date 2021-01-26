@@ -8,8 +8,8 @@
 // Flushs the buffer to the output.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 // Set json_errno in case of failure.
 int json_generate_to_output(generator_t* generator);
@@ -17,8 +17,8 @@ int json_generate_to_output(generator_t* generator);
 // Appends to the buffer of generator and flushs it if necessary.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 // Set json_errno in case of failure.
 //

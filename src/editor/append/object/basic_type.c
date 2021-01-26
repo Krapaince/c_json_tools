@@ -14,7 +14,7 @@ int json_object_append_bool(json_object_t* obj, char const* key, bool value)
     if (json_object_does_key_exist(obj, key))
     {
         json_errno = JSON_E_KEY_ALREADY_EXIST;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
@@ -31,7 +31,7 @@ int json_object_append_nb(json_object_t* obj, char const* key, int value)
     if (json_object_does_key_exist(obj, key))
     {
         json_errno = JSON_E_KEY_ALREADY_EXIST;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
@@ -49,7 +49,7 @@ int json_object_append_str_dup(json_object_t* obj, char const* key,
     if (json_object_does_key_exist(obj, key))
     {
         json_errno = JSON_E_KEY_ALREADY_EXIST;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
@@ -66,7 +66,7 @@ int json_object_append_str(json_object_t* obj, char const* key, char* value)
     if (json_object_does_key_exist(obj, key))
     {
         json_errno = JSON_E_KEY_ALREADY_EXIST;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
@@ -83,7 +83,7 @@ int json_object_append_null(json_object_t* obj, char const* key)
     if (json_object_does_key_exist(obj, key))
     {
         json_errno = JSON_E_KEY_ALREADY_EXIST;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {

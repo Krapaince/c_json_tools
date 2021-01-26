@@ -21,8 +21,8 @@
 //     indent size to 4.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 // in case of failure json_errno will be set
 //
@@ -45,8 +45,8 @@ int json_object_generate_to_fd(json_object_t const* obj, int fd,
 //     indent size to 4.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 // in case of failure json_errno will be set
 //
@@ -68,8 +68,8 @@ int json_object_generate_to_file(json_object_t const* obj, char const* filepath,
 //     indent size to 4.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 // In case of failure json_errno will be set and *strptr will be left untouched.
 //
@@ -93,8 +93,8 @@ int json_object_generate_to_string(json_object_t const* object,
 //     indent size to 4.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 // in case of failure json_errno will be set
 //
@@ -117,8 +117,8 @@ int json_array_generate_to_fd(json_array_t const* array, int fd,
 //     indent size to 4.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 // in case of failure json_errno will be set
 //
@@ -140,8 +140,8 @@ int json_array_generate_to_file(json_array_t const* array, char const* filepath,
 //     indent size to 4.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 // In case of failure json_errno will be set and *strptr will be left untouched.
 //

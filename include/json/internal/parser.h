@@ -22,8 +22,8 @@ int json_parser_file_find_next_token(parser_t* parser);
 // Else the token value is return and it have to be identify
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_parser_find_next_token(parser_t* parser);
 
@@ -31,8 +31,8 @@ int json_parser_find_next_token(parser_t* parser);
 // json_find_next_type identify the token by parsing the token value
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_parser_find_next_type(parser_t* parser, token_type_t expected);
 

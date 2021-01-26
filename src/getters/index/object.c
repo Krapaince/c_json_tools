@@ -10,12 +10,12 @@ static int json_object_get_const_element_by_index(
     if (index < object->len)
     {
         *element = &object->elements[index];
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
         *element = NULL;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }
@@ -26,12 +26,12 @@ int json_object_get_const_element_by_index_and_type(
 {
     int ret = json_object_get_const_element_by_index(object, index, element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         if ((*element)->type != type)
         {
             *element = NULL;
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;
@@ -45,12 +45,12 @@ int json_object_get_element_by_index(json_object_t* object, size_t index,
     if (index < object->len)
     {
         *element = &object->elements[index];
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
         *element = NULL;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }

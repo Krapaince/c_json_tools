@@ -9,8 +9,8 @@
 // fails.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 int json_object_get_bool_by_index(json_object_t const* object, size_t index,
                                   bool* value);
 
@@ -19,8 +19,8 @@ int json_object_get_bool_by_index(json_object_t const* object, size_t index,
 // fails.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 int json_object_get_nb_by_index(json_object_t const* object, size_t index,
                                 int* value);
 
@@ -29,8 +29,8 @@ int json_object_get_nb_by_index(json_object_t const* object, size_t index,
 // fails.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 int json_object_get_str_by_index(json_object_t const* object, size_t index,
                                  str_t const** value);
 
@@ -39,8 +39,8 @@ int json_object_get_str_by_index(json_object_t const* object, size_t index,
 // fails.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 int json_object_get_null_by_index(json_object_t const* object, size_t index,
                                   void const** value);
 
@@ -49,8 +49,8 @@ int json_object_get_null_by_index(json_object_t const* object, size_t index,
 // fails.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 int json_object_get_object_by_index(json_object_t const* object, size_t index,
                                     json_object_t const** value);
 
@@ -59,8 +59,8 @@ int json_object_get_object_by_index(json_object_t const* object, size_t index,
 // fails.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 int json_object_get_array_by_index(json_object_t const* object, size_t index,
                                    json_array_t const** value);
 

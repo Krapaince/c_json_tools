@@ -13,8 +13,7 @@ Test(my_strtok, test_strtok_with_quote)
     char quote = '"';
     size_t i = 0;
 
-    cr_assert(json_strtok(str, &i, delimiter, quote, &token) ==
-              JSON_EXIT_SUCCESS);
+    cr_assert(json_strtok(str, &i, delimiter, quote, &token) == JSON_ES);
     cr_expect_str_eq(token, "\"\"titi\"");
     cr_expect(i == 8);
     free(token);
@@ -28,8 +27,7 @@ Test(my_strtok, test_strtok_with_unmatched_quote)
     char quote = '"';
     size_t i = 0;
 
-    cr_assert(json_strtok(str, &i, delimiter, quote, &token) ==
-              JSON_EXIT_FAILURE);
+    cr_assert(json_strtok(str, &i, delimiter, quote, &token) == JSON_EF);
     cr_expect(token == NULL);
     cr_expect(i == 0);
     cr_expect(json_errno == JSON_E_UNMATCHED_QUOTE);
@@ -43,8 +41,7 @@ Test(my_strtok, test_strtok_without_quote)
     char quote = '"';
     size_t i = 0;
 
-    cr_assert(json_strtok(str, &i, delimiter, quote, &token) ==
-              JSON_EXIT_SUCCESS);
+    cr_assert(json_strtok(str, &i, delimiter, quote, &token) == JSON_ES);
     cr_expect_str_eq(token, "titi");
     cr_expect(i == 7);
     free(token);
@@ -58,8 +55,7 @@ Test(my_strtok, test_strtok_with_empty_token)
     char quote = '"';
     size_t i = 0;
 
-    cr_assert(json_strtok(str, &i, delimiter, quote, &token) ==
-              JSON_EXIT_SUCCESS);
+    cr_assert(json_strtok(str, &i, delimiter, quote, &token) == JSON_ES);
     cr_expect_str_eq(token, "");
     cr_expect(i == 0);
     free(token);
@@ -73,8 +69,7 @@ Test(my_strtok, test_strtok_with_quote_as_end_of_token)
     char quote = '"';
     size_t i = 0;
 
-    cr_assert(json_strtok(str, &i, delimiter, quote, &token) ==
-              JSON_EXIT_SUCCESS);
+    cr_assert(json_strtok(str, &i, delimiter, quote, &token) == JSON_ES);
     cr_expect_str_eq(token, "to\"ken");
     cr_expect(i == 7);
     free(token);

@@ -62,7 +62,7 @@ static bool json_is_string_type(token_t const* token, char quote)
 static int json_identify_undetermined_type(parser_t* parser,
                                            token_type_t expected)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
     token_type_t type = T_ERROR;
 
     if (json_is_number_type(parser->token.value))
@@ -84,7 +84,7 @@ static int json_identify_undetermined_type(parser_t* parser,
     if (type == T_ERROR)
     {
         json_errno = JSON_E_UNKNOW_TYPE;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }
@@ -95,13 +95,13 @@ int json_parser_find_next_type(parser_t* parser, token_type_t expected)
     parser->token.length = 0;
     free(parser->token.value);
     parser->token.value = NULL;
-    if (json_parser_find_next_token(parser) == JSON_EXIT_FAILURE)
+    if (json_parser_find_next_token(parser) == JSON_EF)
     {
-        return JSON_EXIT_FAILURE;
+        return JSON_EF;
     }
     if (parser->token.type != T_UNDETERMINED)
     {
-        return JSON_EXIT_SUCCESS;
+        return JSON_ES;
     }
     return json_identify_undetermined_type(parser, expected);
 }

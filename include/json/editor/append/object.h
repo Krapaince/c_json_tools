@@ -9,8 +9,8 @@
 // set to JSON_E_KEY_ALREADY_EXIST.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_append_bool(json_object_t* obj, char const* key, bool value);
 
@@ -19,8 +19,8 @@ int json_object_append_bool(json_object_t* obj, char const* key, bool value);
 // set to JSON_E_KEY_ALREADY_EXIST.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_append_nb(json_object_t* obj, char const* key, int value);
 
@@ -28,8 +28,8 @@ int json_object_append_nb(json_object_t* obj, char const* key, int value);
 // The function fails if key already exist in obj.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_append_str_dup(json_object_t* obj, char const* key,
                                char const* value);
@@ -39,8 +39,8 @@ int json_object_append_str_dup(json_object_t* obj, char const* key,
 // The function fails if key already exist in obj.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_append_str(json_object_t* obj, char const* key, char* value);
 
@@ -49,8 +49,8 @@ int json_object_append_str(json_object_t* obj, char const* key, char* value);
 // set to JSON_E_KEY_ALREADY_EXIST.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_append_null(json_object_t* obj, char const* key);
 
@@ -59,8 +59,8 @@ int json_object_append_null(json_object_t* obj, char const* key);
 // The function fails if key already exist in obj.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_append_object(json_object_t* obj, char const* key,
                               json_object_t* value);
@@ -70,8 +70,8 @@ int json_object_append_object(json_object_t* obj, char const* key,
 // The function fails if key already exist in obj.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_append_array(json_object_t* obj, char const* key,
                              json_array_t* value);

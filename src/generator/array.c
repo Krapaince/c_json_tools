@@ -35,7 +35,7 @@ static void json_generate_array_teardown_context(generator_t* generator,
 int json_generate_array(generator_t* generator, json_array_t const* array)
 {
     size_t i = 0;
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     json_generate_array_setup_context(generator, array);
     while (i < array->len)
@@ -51,7 +51,7 @@ int json_generate_array(generator_t* generator, json_array_t const* array)
     json_generate_array_teardown_context(generator, array);
     if (json_errno != JSON_E_DEFAULT)
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }

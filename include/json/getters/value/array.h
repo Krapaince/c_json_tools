@@ -10,8 +10,8 @@
 // and index is left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_index_by_bool_value(json_array_t const* array, bool value,
                                        size_t* index);
@@ -22,8 +22,8 @@ int json_array_get_index_by_bool_value(json_array_t const* array, bool value,
 // and index is left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_index_by_nb_value(json_array_t const* array, int value,
                                      size_t* index);
@@ -34,8 +34,8 @@ int json_array_get_index_by_nb_value(json_array_t const* array, int value,
 // and index is left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_index_by_string_value(json_array_t const* array, char* value,
                                          size_t* index);
@@ -46,8 +46,8 @@ int json_array_get_index_by_string_value(json_array_t const* array, char* value,
 // and index is left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_index_by_str_value(json_array_t const* array, str_t* value,
                                       size_t* index);
@@ -58,8 +58,8 @@ int json_array_get_index_by_str_value(json_array_t const* array, str_t* value,
 // and index is left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_index_by_null_value(json_array_t const* array,
                                        size_t* index);
@@ -70,8 +70,8 @@ int json_array_get_index_by_null_value(json_array_t const* array,
 // and index is left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_index_by_object_value(json_array_t const* array,
                                          json_object_t* value, size_t* index);
@@ -82,8 +82,8 @@ int json_array_get_index_by_object_value(json_array_t const* array,
 // and index is left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_index_by_array_value(json_array_t const* array,
                                         json_array_t* value, size_t* index);

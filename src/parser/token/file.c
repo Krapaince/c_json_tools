@@ -10,7 +10,7 @@
 
 static int json_get_next_lign(parser_t* parser)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
     ssize_t nbytes;
     parser_file_t* file = &parser->source.file;
 
@@ -20,7 +20,7 @@ static int json_get_next_lign(parser_t* parser)
     ++parser->line;
     if (nbytes == -1)
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
         if (errno != 0)
         {
             json_errno = JSON_E_SYS_FAILURE;
@@ -61,14 +61,14 @@ static int json_identify_know_token(parser_t* parser)
     {
         parser->token.type = token->type;
         parser->index += token->length;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
         ret = json_strtok(parser->source.file.buffer, &parser->index,
                           parser->delimiters, parser->quote,
                           &parser->token.value);
-        if (ret == JSON_EXIT_SUCCESS)
+        if (ret == JSON_ES)
         {
             parser->token.length = strlen(parser->token.value);
             parser->token.type = T_UNDETERMINED;
@@ -85,9 +85,9 @@ int json_parser_file_find_next_token(parser_t* parser)
     if (parser->source.file.buffer == NULL ||
         parser->source.file.buffer[parser->index] == '\0')
     {
-        if (json_get_next_lign(parser) == JSON_EXIT_FAILURE)
+        if (json_get_next_lign(parser) == JSON_EF)
         {
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
         else
         {

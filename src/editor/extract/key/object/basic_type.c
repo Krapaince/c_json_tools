@@ -8,7 +8,7 @@ int json_object_extract_bool_by_key(json_object_t* obj, char const* key,
     int ret = json_object_extract_element_by_key_and_type(obj, key, JSON_BOOL,
                                                           &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.boolean;
     }
@@ -22,7 +22,7 @@ int json_object_extract_nb_by_key(json_object_t* obj, char const* key,
     int ret = json_object_extract_element_by_key_and_type(obj, key, JSON_NB,
                                                           &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.nb;
     }
@@ -36,7 +36,7 @@ int json_object_extract_string_by_key(json_object_t* obj, char const* key,
     int ret = json_object_extract_element_by_key_and_type(obj, key, JSON_STR,
                                                           &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.str.value;
     }
@@ -50,7 +50,7 @@ int json_object_extract_str_by_key(json_object_t* obj, char const* key,
     int ret = json_object_extract_element_by_key_and_type(obj, key, JSON_STR,
                                                           &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.str;
     }

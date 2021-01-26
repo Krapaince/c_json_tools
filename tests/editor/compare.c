@@ -10,19 +10,15 @@ static json_object_t* test_create_object(void)
     char* str = strdup("oui");
 
     cr_assert(object != NULL && sub_object != NULL && str != NULL);
-    cr_assert(json_object_append_bool(object, "grominet", true) ==
-              JSON_EXIT_SUCCESS);
-    cr_assert(json_object_append_nb(object, "titi", -45) == JSON_EXIT_SUCCESS);
-    cr_assert(json_object_append_str(sub_object, "oio", str) ==
-              JSON_EXIT_SUCCESS);
+    cr_assert(json_object_append_bool(object, "grominet", true) == JSON_ES);
+    cr_assert(json_object_append_nb(object, "titi", -45) == JSON_ES);
+    cr_assert(json_object_append_str(sub_object, "oio", str) == JSON_ES);
     cr_assert(json_object_append_str_dup(sub_object, "oi", "blablou") ==
-              JSON_EXIT_SUCCESS);
-    cr_assert(json_object_append_null(object, "nu") == JSON_EXIT_SUCCESS);
-    cr_assert(json_object_append_object(object, "obh", sub_object) ==
-              JSON_EXIT_SUCCESS);
-    cr_assert(json_array_append_bool(array, true) == JSON_EXIT_SUCCESS);
-    cr_assert(json_object_append_array(object, "arr", array) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
+    cr_assert(json_object_append_null(object, "nu") == JSON_ES);
+    cr_assert(json_object_append_object(object, "obh", sub_object) == JSON_ES);
+    cr_assert(json_array_append_bool(array, true) == JSON_ES);
+    cr_assert(json_object_append_array(object, "arr", array) == JSON_ES);
     return object;
 }
 
@@ -42,8 +38,7 @@ Test(json_object_compare, test_json_object_compare_false)
 
     cr_assert(object != NULL);
     cr_assert(object1 != NULL);
-    cr_assert(json_object_append_str_dup(object1, "cmp", "failure") ==
-              JSON_EXIT_SUCCESS);
+    cr_assert(json_object_append_str_dup(object1, "cmp", "failure") == JSON_ES);
     cr_expect(json_object_compare(object, object1) == false);
     json_object_destroy(object);
     json_object_destroy(object1);
@@ -57,15 +52,15 @@ static json_array_t* test_create_array(void)
     char* str = strdup("titu");
 
     cr_assert(array != NULL);
-    cr_assert(json_array_append_bool(array, true) == JSON_EXIT_SUCCESS);
-    cr_assert(json_array_append_nb(array, -45) == JSON_EXIT_SUCCESS);
-    cr_assert(json_array_append_str(array, str) == JSON_EXIT_SUCCESS);
-    cr_assert(json_array_append_str_dup(array, "toto") == JSON_EXIT_SUCCESS);
-    cr_assert(json_array_append_null(array) == JSON_EXIT_SUCCESS);
-    cr_assert(json_array_append_bool(sub_array, true) == JSON_EXIT_SUCCESS);
-    cr_assert(json_array_append_array(array, sub_array) == JSON_EXIT_SUCCESS);
-    cr_assert(json_object_append_nb(obj, "nb", 45) == JSON_EXIT_SUCCESS);
-    cr_assert(json_array_append_object(array, obj) == JSON_EXIT_SUCCESS);
+    cr_assert(json_array_append_bool(array, true) == JSON_ES);
+    cr_assert(json_array_append_nb(array, -45) == JSON_ES);
+    cr_assert(json_array_append_str(array, str) == JSON_ES);
+    cr_assert(json_array_append_str_dup(array, "toto") == JSON_ES);
+    cr_assert(json_array_append_null(array) == JSON_ES);
+    cr_assert(json_array_append_bool(sub_array, true) == JSON_ES);
+    cr_assert(json_array_append_array(array, sub_array) == JSON_ES);
+    cr_assert(json_object_append_nb(obj, "nb", 45) == JSON_ES);
+    cr_assert(json_array_append_object(array, obj) == JSON_ES);
     return array;
 }
 
@@ -85,7 +80,7 @@ Test(json_array_compare, test_json_array_compare_false)
 
     cr_assert(array != NULL);
     cr_assert(array1 != NULL);
-    cr_assert(json_array_append_bool(array1, true) == JSON_EXIT_SUCCESS);
+    cr_assert(json_array_append_bool(array1, true) == JSON_ES);
     cr_expect(json_array_compare(array, array1) == false);
     json_array_destroy(array);
     json_array_destroy(array1);

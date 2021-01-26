@@ -39,7 +39,7 @@ int json_parser_object_append_str(json_object_t* obj, str_t* key,
     element.value.str.len = token->length;
     json_remove_str_quote(&element.value.str);
     ret = json_object_add_element(obj, &element);
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         token->value = NULL;
     }

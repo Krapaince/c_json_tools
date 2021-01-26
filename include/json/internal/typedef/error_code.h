@@ -1,8 +1,10 @@
 #ifndef JSON_INTERNAL_TYPEDEF_ERROR_CODE_H_
 #define JSON_INTERNAL_TYPEDEF_ERROR_CODE_H_
 
-#define JSON_EXIT_SUCCESS 0
-#define JSON_EXIT_FAILURE 1
+/// Json exit success value
+#define JSON_ES 0
+/// Json exit failure value
+#define JSON_EF 1
 
 typedef enum
 {

@@ -15,7 +15,7 @@ int json_object_append_array(json_object_t* obj, char const* key,
     if (json_object_does_key_exist(obj, key))
     {
         json_errno = JSON_E_KEY_ALREADY_EXIST;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
@@ -32,7 +32,7 @@ int json_object_append_object(json_object_t* obj, char const* key,
     if (json_object_does_key_exist(obj, key))
     {
         json_errno = JSON_E_KEY_ALREADY_EXIST;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {

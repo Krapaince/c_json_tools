@@ -6,8 +6,8 @@
 // Assigns to the element the key (duplicate key)
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_assign_key_to_element(json_object_element_t* element, char const* key);
 
@@ -15,8 +15,8 @@ int json_assign_key_to_element(json_object_element_t* element, char const* key);
 // function assigns to element the key
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_assign_key_to_element_safe(json_object_t const* obj,
                                     json_object_element_t* element,

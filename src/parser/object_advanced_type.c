@@ -19,7 +19,7 @@ int json_get_array_in_object(json_object_t* obj, parser_t* parser,
 
     if (json_errno != JSON_E_DEFAULT)
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
         free(key_save.value);
     }
     else
@@ -29,7 +29,7 @@ int json_get_array_in_object(json_object_t* obj, parser_t* parser,
         element.value.array = new_array;
         parser->token.type = T_NONE;
         ret = json_object_add_element(obj, &element);
-        if (ret != JSON_EXIT_SUCCESS)
+        if (ret != JSON_ES)
         {
             json_array_destroy(new_array);
         }
@@ -47,7 +47,7 @@ int json_get_object_in_object(json_object_t* obj, parser_t* parser,
 
     if (json_errno != JSON_E_DEFAULT)
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
         free(key_save.value);
     }
     else
@@ -57,7 +57,7 @@ int json_get_object_in_object(json_object_t* obj, parser_t* parser,
         element.value.obj = new_obj;
         parser->token.type = T_NONE;
         ret = json_object_add_element(obj, &element);
-        if (ret != JSON_EXIT_SUCCESS)
+        if (ret != JSON_ES)
         {
             json_object_destroy(new_obj);
         }

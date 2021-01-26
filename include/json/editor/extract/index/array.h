@@ -11,8 +11,8 @@
 // left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_extract_bool_by_index(json_array_t* array, size_t index,
                                      bool* value);
@@ -24,8 +24,8 @@ int json_array_extract_bool_by_index(json_array_t* array, size_t index,
 // left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_extract_nb_by_index(json_array_t* array, size_t index,
                                    int* value);
@@ -38,8 +38,8 @@ int json_array_extract_nb_by_index(json_array_t* array, size_t index,
 // left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_extract_string_by_index(json_array_t* array, size_t index,
                                        char** value);
@@ -52,8 +52,8 @@ int json_array_extract_string_by_index(json_array_t* array, size_t index,
 // value are left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_extract_str_by_index(json_array_t* array, size_t index,
                                     str_t* value);
@@ -66,8 +66,8 @@ int json_array_extract_str_by_index(json_array_t* array, size_t index,
 // left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_extract_object_by_index(json_array_t* array, size_t index,
                                        json_object_t** value);
@@ -80,8 +80,8 @@ int json_array_extract_object_by_index(json_array_t* array, size_t index,
 // left untouched.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_extract_array_by_index(json_array_t* array, size_t index,
                                       json_array_t** value);

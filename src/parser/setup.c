@@ -27,12 +27,12 @@ static void json_init_parser(parser_t* parser, parser_type_t type)
 
 int json_setup_parser_from_fd(parser_t* parser, int fd)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     parser->source.file.fstream = fdopen(fd, "r");
     if (parser->source.file.fstream == NULL)
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
         json_errno = JSON_E_SYS_FAILURE;
     }
     else
@@ -44,12 +44,12 @@ int json_setup_parser_from_fd(parser_t* parser, int fd)
 
 int json_setup_parser_from_filepath(parser_t* parser, char const* filepath)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     parser->source.file.fstream = fopen(filepath, "r");
     if (parser->source.file.fstream == NULL)
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
         json_errno = JSON_E_SYS_FAILURE;
     }
     else

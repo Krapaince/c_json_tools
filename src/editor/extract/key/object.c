@@ -12,7 +12,7 @@ int json_object_extract_element_by_key_and_type(json_object_t* obj,
     int ret = json_object_get_index_by_key(obj, key, &index);
     json_object_element_t* found_elem;
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         found_elem = &obj->elements[index];
         if (json_object_compare_element_type(found_elem, type))
@@ -23,7 +23,7 @@ int json_object_extract_element_by_key_and_type(json_object_t* obj,
         }
         else
         {
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;

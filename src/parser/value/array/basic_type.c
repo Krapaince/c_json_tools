@@ -34,7 +34,7 @@ int json_parser_array_append_str(json_array_t* array, token_t* token)
     element.value.str.len = token->length;
     json_remove_str_quote(&element.value.str);
     ret = json_array_add_element(array, &element);
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         token->value = NULL;
     }

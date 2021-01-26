@@ -9,8 +9,8 @@
 // function fails.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_index_by_value_and_type(json_array_t const* array,
                                            json_array_element_t const* element,

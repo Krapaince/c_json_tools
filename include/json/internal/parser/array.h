@@ -16,8 +16,8 @@ int json_get_object_in_array(json_array_t* array, parser_t* parser,
 // Parses the file to find the next token and evalutes it for the json grammar
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_get_next_token_array(parser_t* parser, token_type_t* expected);
 

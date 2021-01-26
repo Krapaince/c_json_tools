@@ -14,11 +14,11 @@ int json_array_set_object_by_index(json_array_t* array, size_t index,
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_OBJ;
         element->value.obj = value;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }
@@ -35,11 +35,11 @@ int json_array_set_array_by_index(json_array_t* array, size_t index,
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_ARRAY;
         element->value.array = value;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }

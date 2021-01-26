@@ -9,8 +9,8 @@
 // fails and sets *element to NULL.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_const_element_by_index_and_type(
     json_array_t const* array, size_t index, json_type_t type,
@@ -21,8 +21,8 @@ int json_array_get_const_element_by_index_and_type(
 // fails and sets *element to NULL.
 //
 // Return:
-//   Success: JSON_EXIT_SUCCESS
-//   Failure: JSON_EXIT_FAILURE
+//   Success: JSON_ES
+//   Failure: JSON_EF
 //
 int json_array_get_element_by_index(json_array_t* array, size_t index,
                                     json_array_element_t** element);

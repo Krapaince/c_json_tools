@@ -22,7 +22,7 @@ Test(json_object_parse_from_filepath,
     cr_assert(obj != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_object_generate_to_file(obj, output_filepath, &setting) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
     output = fopen(output_filepath, "r");
     cr_assert(expected != NULL);
     cr_assert(output != NULL);
@@ -45,7 +45,7 @@ Test(json_object_parse_from_filepath,
     cr_assert(obj != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_object_generate_to_file(obj, output_filepath, &setting) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
     output = fopen(output_filepath, "r");
     cr_assert(expected != NULL);
     cr_assert(output != NULL);
@@ -68,7 +68,7 @@ Test(json_object_parse_from_filepath,
     cr_assert(obj != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_object_generate_to_file(obj, output_filepath, &setting) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
     output = fopen(output_filepath, "r");
     cr_assert(expected != NULL);
     cr_assert(output != NULL);
@@ -91,7 +91,7 @@ Test(json_object_parse_from_filepath,
     cr_assert(obj != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_object_generate_to_file(obj, output_filepath, &setting) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
     output = fopen(output_filepath, "r");
     cr_assert(expected != NULL);
     cr_assert(output != NULL);
@@ -115,7 +115,7 @@ Test(json_object_parse_from_filepath,
     cr_assert(obj != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_object_generate_to_file(obj, output_filepath, NULL) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
     output = fopen(output_filepath, "r");
     cr_assert(expected != NULL);
     cr_assert(output != NULL);
@@ -139,7 +139,7 @@ Test(json_object_parse_from_filepath,
     cr_assert(obj != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_object_generate_to_file(obj, output_filepath, &setting) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
     output = fopen(output_filepath, "r");
     cr_assert(expected != NULL);
     cr_assert(output != NULL);

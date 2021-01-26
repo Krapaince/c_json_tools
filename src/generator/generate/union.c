@@ -29,5 +29,5 @@ int json_generate_union_value(generator_t* generator,
         case JSON_OBJ:
             return json_generate_object(generator, value->obj);
     }
-    return JSON_EXIT_SUCCESS;
+    return JSON_ES;
 }

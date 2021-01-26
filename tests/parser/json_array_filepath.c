@@ -18,7 +18,7 @@ Test(json_array_parse_from_filepath, test_json_array_parse_from_filepath_valid)
     cr_assert(array != NULL);
     cr_assert(json_errno == JSON_E_DEFAULT);
     cr_assert(json_array_generate_to_file(array, output_filepath, &setting) ==
-              JSON_EXIT_SUCCESS);
+              JSON_ES);
     output = fopen(output_filepath, "r");
     cr_assert(expected != NULL);
     cr_assert(output != NULL);

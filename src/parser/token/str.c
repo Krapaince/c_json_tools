@@ -22,12 +22,12 @@ static int json_skip_whitespaces(parser_t* parser)
     if (buffer[i] == '\0')
     {
         json_errno = JSON_E_INVALID_EOF;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
         parser->index = i;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     return ret;
 }
@@ -42,14 +42,14 @@ static int json_identify_know_token(parser_t* parser)
     {
         parser->token.type = token->type;
         parser->index += token->length;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
         ret = json_strtok(parser->source.str.buffer, &parser->index,
                           parser->delimiters, parser->quote,
                           &parser->token.value);
-        if (ret == JSON_EXIT_SUCCESS)
+        if (ret == JSON_ES)
         {
             parser->token.length = strlen(parser->token.value);
             parser->token.type = T_UNDETERMINED;
@@ -62,7 +62,7 @@ int json_parser_str_find_next_token(parser_t* parser)
 {
     int ret = json_skip_whitespaces(parser);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         ret = json_identify_know_token(parser);
     }

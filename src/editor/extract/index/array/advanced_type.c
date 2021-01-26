@@ -9,7 +9,7 @@ int json_array_extract_object_by_index(json_array_t* array, size_t index,
     int ret = json_array_extract_element_by_index_and_type(array, index,
                                                            JSON_OBJ, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.obj;
     }
@@ -23,7 +23,7 @@ int json_array_extract_array_by_index(json_array_t* array, size_t index,
     int ret = json_array_extract_element_by_index_and_type(
         array, index, JSON_ARRAY, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element.value.array;
     }

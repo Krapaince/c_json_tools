@@ -12,8 +12,7 @@ Test(json_object_get_bool_value_by_key, test_json_object_get_bool_value_by_key)
     bool value = false;
 
     cr_assert(obj != NULL);
-    cr_expect(json_object_get_bool_by_key(obj, "bool_true", &value) ==
-              JSON_EXIT_SUCCESS);
+    cr_expect(json_object_get_bool_by_key(obj, "bool_true", &value) == JSON_ES);
     cr_expect(value == true);
     json_object_destroy(obj);
 }
@@ -27,7 +26,7 @@ Test(json_object_get_bool_value_by_key,
 
     cr_assert(obj != NULL);
     cr_expect(json_object_get_bool_by_key(obj, "bool_true_invalid", &value) ==
-              JSON_EXIT_FAILURE);
+              JSON_EF);
     json_object_destroy(obj);
 }
 
@@ -39,8 +38,7 @@ Test(json_object_get_bool_value_by_key,
     bool value = false;
 
     cr_assert(obj != NULL);
-    cr_expect(json_object_get_bool_by_key(obj, "array", &value) ==
-              JSON_EXIT_FAILURE);
+    cr_expect(json_object_get_bool_by_key(obj, "array", &value) == JSON_EF);
     json_object_destroy(obj);
 }
 
@@ -52,8 +50,7 @@ Test(json_object_get_array_value_by_key,
     json_array_t const* value = NULL;
 
     cr_assert(obj != NULL);
-    cr_expect(json_object_get_array_by_key(obj, "array", &value) ==
-              JSON_EXIT_SUCCESS);
+    cr_expect(json_object_get_array_by_key(obj, "array", &value) == JSON_ES);
     cr_expect(value != NULL);
     json_object_destroy(obj);
 }
@@ -65,8 +62,7 @@ Test(json_object_get_nb_value_by_key, test_json_object_get_nb_value_by_key)
     int value = 0;
 
     cr_assert(obj != NULL);
-    cr_expect(json_object_get_nb_by_key(obj, "nbr", &value) ==
-              JSON_EXIT_SUCCESS);
+    cr_expect(json_object_get_nb_by_key(obj, "nbr", &value) == JSON_ES);
     cr_expect(value == 34);
     json_object_destroy(obj);
 }
@@ -78,8 +74,7 @@ Test(json_object_get_null_value_by_key, test_json_object_get_null_value_by_key)
     void const* value = NULL;
 
     cr_assert(obj != NULL);
-    cr_expect(json_object_get_null_by_key(obj, "null", &value) ==
-              JSON_EXIT_SUCCESS);
+    cr_expect(json_object_get_null_by_key(obj, "null", &value) == JSON_ES);
     cr_expect(value == NULL);
     json_object_destroy(obj);
 }
@@ -92,8 +87,7 @@ Test(json_object_get_object_value_by_key,
     json_object_t const* value = NULL;
 
     cr_assert(obj != NULL);
-    cr_expect(json_object_get_object_by_key(obj, "obj", &value) ==
-              JSON_EXIT_SUCCESS);
+    cr_expect(json_object_get_object_by_key(obj, "obj", &value) == JSON_ES);
     cr_expect(value != NULL);
     json_object_destroy(obj);
 }
@@ -105,8 +99,7 @@ Test(json_object_get_str_value_by_key, test_json_object_get_str_value_by_key)
     char const* value = NULL;
 
     cr_assert(obj != NULL);
-    cr_expect(json_object_get_string_by_key(obj, "str", &value) ==
-              JSON_EXIT_SUCCESS);
+    cr_expect(json_object_get_string_by_key(obj, "str", &value) == JSON_ES);
     cr_expect_str_eq(value, "str");
     json_object_destroy(obj);
 }

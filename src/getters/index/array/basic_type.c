@@ -9,7 +9,7 @@ int json_array_get_bool_by_index(json_array_t const* array, size_t index,
     int ret = json_array_get_const_element_by_index_and_type(
         array, index, JSON_BOOL, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.boolean;
     }
@@ -23,7 +23,7 @@ int json_array_get_nb_by_index(json_array_t const* array, size_t index,
     int ret = json_array_get_const_element_by_index_and_type(array, index,
                                                              JSON_NB, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.nb;
     }
@@ -37,7 +37,7 @@ int json_array_get_str_by_index(json_array_t const* array, size_t index,
     int ret = json_array_get_const_element_by_index_and_type(
         array, index, JSON_STR, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = &element->value.str;
     }
@@ -51,7 +51,7 @@ int json_array_get_null_by_index(json_array_t const* array, size_t index,
     int ret = json_array_get_const_element_by_index_and_type(
         array, index, JSON_NULL, &element);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = element->value.null;
     }

@@ -14,11 +14,11 @@ int json_object_get_index_by_key(json_object_t const* obj, char const* key,
         if (strcmp(obj->elements[i].key.value, key) == 0)
         {
             *index = i;
-            return JSON_EXIT_SUCCESS;
+            return JSON_ES;
         }
         ++i;
     }
-    return JSON_EXIT_FAILURE;
+    return JSON_EF;
 }
 
 int json_object_get_const_element_by_key(json_object_t const* obj,
@@ -28,7 +28,7 @@ int json_object_get_const_element_by_key(json_object_t const* obj,
     size_t index;
     int ret = json_object_get_index_by_key(obj, key, &index);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = &obj->elements[index];
     }
@@ -45,12 +45,12 @@ int json_object_get_const_element_by_key_and_type(
 {
     int ret = json_object_get_const_element_by_key(obj, key, value);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         if (json_object_compare_element_type(*value, type) == false)
         {
             *value = NULL;
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;
@@ -62,7 +62,7 @@ int json_object_get_element_by_key(json_object_t* obj, char const* key,
     size_t index;
     int ret = json_object_get_index_by_key(obj, key, &index);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         *value = &obj->elements[index];
     }
@@ -79,12 +79,12 @@ int json_object_get_element_by_key_and_type(json_object_t* obj, char const* key,
 {
     int ret = json_object_get_element_by_key(obj, key, value);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         if (json_object_compare_element_type(*value, type) == false)
         {
             *value = NULL;
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;

@@ -11,8 +11,8 @@
 // If the function failed, the object if left untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_set_bool_by_key(json_object_t* obj, char const* key,
                                 bool value);
@@ -23,8 +23,8 @@ int json_object_set_bool_by_key(json_object_t* obj, char const* key,
 // If the function failed, the object if left untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_set_nb_by_key(json_object_t* obj, char const* key, int value);
 
@@ -34,8 +34,8 @@ int json_object_set_nb_by_key(json_object_t* obj, char const* key, int value);
 // If the function failed, the object if left untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_set_str_dup_by_key(json_object_t* obj, char const* key,
                                    char const* value);
@@ -46,8 +46,8 @@ int json_object_set_str_dup_by_key(json_object_t* obj, char const* key,
 // If the function failed, the object if left untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_set_str_by_key(json_object_t* obj, char const* key,
                                char* value);
@@ -58,8 +58,8 @@ int json_object_set_str_by_key(json_object_t* obj, char const* key,
 // If the function failed, the object if left untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_set_null_by_key(json_object_t* obj, char const* key);
 
@@ -69,8 +69,8 @@ int json_object_set_null_by_key(json_object_t* obj, char const* key);
 // If the function failed, the object if left untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_set_object_by_key(json_object_t* obj, char const* key,
                                   json_object_t* value);
@@ -81,8 +81,8 @@ int json_object_set_object_by_key(json_object_t* obj, char const* key,
 // If the function failed, the object if left untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_object_set_array_by_key(json_object_t* obj, char const* key,
                                  json_array_t* value);

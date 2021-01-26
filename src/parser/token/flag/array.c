@@ -30,17 +30,17 @@ int json_update_token_flag_array(token_type_t type, token_type_t* expected)
     if (!(*expected & type))
     {
         json_set_flag_error_synthax(expected);
-        return JSON_EXIT_FAILURE;
+        return JSON_EF;
     }
     while (array_flags[i].ptr)
     {
         if (array_flags[i].type & type)
         {
             array_flags[i].ptr(expected);
-            return JSON_EXIT_SUCCESS;
+            return JSON_ES;
         }
         ++i;
     }
     json_set_flag_error_synthax(expected);
-    return JSON_EXIT_FAILURE;
+    return JSON_EF;
 }

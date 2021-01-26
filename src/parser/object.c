@@ -12,12 +12,12 @@ int json_get_next_token_object(json_object_t const* obj, parser_t* parser,
 {
     int ret = json_parser_find_next_type(parser, *expected);
 
-    if (ret != JSON_EXIT_SUCCESS)
+    if (ret != JSON_ES)
     {
         return ret;
     }
     ret = json_update_token_flag_obj(parser->token.type, expected);
-    if (ret != JSON_EXIT_SUCCESS)
+    if (ret != JSON_ES)
     {
         return ret;
     }
@@ -31,7 +31,7 @@ int json_get_next_token_object(json_object_t const* obj, parser_t* parser,
 static int json_add_type_object(json_object_t* obj, parser_t* parser)
 {
     size_t i = 0;
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
     token_type_t const types[] = {T_BOOL, T_NB, T_STR, T_NULL, T_ERROR};
     int (*const fct_ptr[])(json_object_t * obj, str_t * key,
                            token_t * token) = {
@@ -47,7 +47,7 @@ static int json_add_type_object(json_object_t* obj, parser_t* parser)
         }
         ++i;
     }
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         parser->key.value = NULL;
     }
@@ -65,7 +65,7 @@ static void json_treat_key_object(parser_t* parser)
 static int json_treat_token_object(json_object_t* obj, parser_t* parser,
                                    token_type_t* expected)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     if (parser->token.type & T_TYPE)
     {
@@ -102,13 +102,13 @@ json_object_t* json_parse_object(parser_t* parser, token_type_t* expected)
     while (parser->token.type != T_R_BRACKET && json_errno == JSON_E_DEFAULT)
     {
         ret = json_get_next_token_object(obj, parser, expected);
-        if (ret != JSON_EXIT_SUCCESS)
+        if (ret != JSON_ES)
         {
             json_object_destroy(obj);
             return NULL;
         }
         ret = json_treat_token_object(obj, parser, expected);
-        if (ret != JSON_EXIT_SUCCESS)
+        if (ret != JSON_ES)
         {
             json_object_destroy(obj);
             return NULL;

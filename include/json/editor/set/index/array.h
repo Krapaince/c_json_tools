@@ -9,8 +9,8 @@
 // untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_set_bool_by_index(json_array_t* array, size_t index, bool value);
 
@@ -19,8 +19,8 @@ int json_array_set_bool_by_index(json_array_t* array, size_t index, bool value);
 // untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_set_nb_by_index(json_array_t* array, size_t index, int value);
 
@@ -30,8 +30,8 @@ int json_array_set_nb_by_index(json_array_t* array, size_t index, int value);
 // The value is duplicated if the function fails json_errno is set.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_set_str_dup_by_index(json_array_t* array, size_t index,
                                     char const* value);
@@ -42,8 +42,8 @@ int json_array_set_str_dup_by_index(json_array_t* array, size_t index,
 // The function takes the pointer ownership.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_set_str_by_index(json_array_t* array, size_t index, char* value);
 
@@ -52,8 +52,8 @@ int json_array_set_str_by_index(json_array_t* array, size_t index, char* value);
 // untouched.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_set_null_by_index(json_array_t* array, size_t index);
 
@@ -63,8 +63,8 @@ int json_array_set_null_by_index(json_array_t* array, size_t index);
 // The function takes the pointer ownership.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_set_object_by_index(json_array_t* array, size_t index,
                                    json_object_t* value);
@@ -75,8 +75,8 @@ int json_array_set_object_by_index(json_array_t* array, size_t index,
 // The function takes the pointer ownership.
 //
 // Return:
-//   Failure: JSON_EXIT_FAILURE
-//   Success: JSON_EXIT_SUCCESS
+//   Failure: JSON_EF
+//   Success: JSON_ES
 //
 int json_array_set_array_by_index(json_array_t* array, size_t index,
                                   json_array_t* value);

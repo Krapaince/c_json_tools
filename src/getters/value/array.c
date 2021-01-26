@@ -17,11 +17,11 @@ static int json_array_get_index_by_value(json_array_t const* array,
                                  &element->value, element->type))
         {
             *index = i;
-            return JSON_EXIT_SUCCESS;
+            return JSON_ES;
         }
         ++i;
     }
-    return JSON_EXIT_FAILURE;
+    return JSON_EF;
 }
 
 int json_array_get_index_by_value_and_type(json_array_t const* array,
@@ -30,12 +30,12 @@ int json_array_get_index_by_value_and_type(json_array_t const* array,
 {
     int ret = json_array_get_index_by_value(array, element, index);
 
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         if (json_array_compare_element_type(&array->elements[*index],
                                             element->type) == false)
         {
-            ret = JSON_EXIT_FAILURE;
+            ret = JSON_EF;
         }
     }
     return ret;

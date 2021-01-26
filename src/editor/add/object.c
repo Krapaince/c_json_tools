@@ -14,26 +14,26 @@ static int json_object_increase_size(json_object_t* obj)
     if (elements == NULL)
     {
         json_errno = JSON_E_SYS_FAILURE;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
         obj->elements = elements;
         obj->len_alloc = size;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     return ret;
 }
 
 int json_object_add_element(json_object_t* obj, json_object_element_t* element)
 {
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     if (obj->len_alloc <= obj->len)
     {
         ret = json_object_increase_size(obj);
     }
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         obj->elements[obj->len] = *element;
         ++obj->len;

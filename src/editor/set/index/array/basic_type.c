@@ -15,11 +15,11 @@ int json_array_set_bool_by_index(json_array_t* array, size_t index, bool value)
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_BOOL;
         element->value.boolean = value;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }
@@ -35,11 +35,11 @@ int json_array_set_nb_by_index(json_array_t* array, size_t index, int value)
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_NB;
         element->value.nb = value;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }
@@ -47,7 +47,7 @@ int json_array_set_nb_by_index(json_array_t* array, size_t index, int value)
 int json_array_set_str_dup_by_index(json_array_t* array, size_t index,
                                     char const* value)
 {
-    int ret = JSON_EXIT_FAILURE;
+    int ret = JSON_EF;
     json_array_element_t* element;
     json_array_element_t new_elemnent;
 
@@ -61,7 +61,7 @@ int json_array_set_str_dup_by_index(json_array_t* array, size_t index,
             element = &array->elements[index];
             json_union_value_destroy(&element->value, element->type);
             *element = new_elemnent;
-            ret = JSON_EXIT_SUCCESS;
+            ret = JSON_ES;
         }
         else
         {
@@ -83,11 +83,11 @@ int json_array_set_str_by_index(json_array_t* array, size_t index, char* value)
         element->type = JSON_STR;
         element->value.str.value = value;
         element->value.str.len = strlen(value);
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }
@@ -103,11 +103,11 @@ int json_array_set_null_by_index(json_array_t* array, size_t index)
         json_union_value_destroy(&element->value, element->type);
         element->type = JSON_NULL;
         element->value.null = NULL;
-        ret = JSON_EXIT_SUCCESS;
+        ret = JSON_ES;
     }
     else
     {
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     return ret;
 }

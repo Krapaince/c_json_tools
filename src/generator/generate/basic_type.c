@@ -47,7 +47,7 @@ int json_generate_str(generator_t* generator, str_t const* str)
     size_t i = 0;
     int ret = json_generate_to_buffer(generator, &quote->code, 1);
 
-    while (i < str->len && ret == JSON_EXIT_SUCCESS)
+    while (i < str->len && ret == JSON_ES)
     {
         esc_char = json_find_esc_char_from_char(str->value[i]);
         if (esc_char)
@@ -61,7 +61,7 @@ int json_generate_str(generator_t* generator, str_t const* str)
         }
         ++i;
     }
-    if (ret == JSON_EXIT_SUCCESS)
+    if (ret == JSON_ES)
     {
         ret = json_generate_to_buffer(generator, &quote->code, 1);
     }

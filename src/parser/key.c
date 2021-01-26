@@ -17,9 +17,9 @@ int json_does_key_already_exist(json_object_t const* obj, token_t const* token)
             strncmp(&token->value[1], key->value, key->len) == 0)
         {
             json_errno = JSON_E_KEY_DUPLICATED;
-            return JSON_EXIT_FAILURE;
+            return JSON_EF;
         }
         ++i;
     }
-    return JSON_EXIT_SUCCESS;
+    return JSON_ES;
 }

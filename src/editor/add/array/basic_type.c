@@ -34,12 +34,12 @@ int json_array_add_str_dup(json_array_t* array, char const* value)
     if (element.value.str.value == NULL)
     {
         json_errno = JSON_E_SYS_FAILURE;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
         ret = json_array_add_element(array, &element);
-        if (ret != JSON_EXIT_SUCCESS)
+        if (ret != JSON_ES)
         {
             free(element.value.str.value);
         }

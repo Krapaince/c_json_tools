@@ -106,19 +106,19 @@ int json_strtok(char const* str, size_t* index, char const* delimiters,
 {
     size_t len;
     size_t len_str;
-    int ret = JSON_EXIT_SUCCESS;
+    int ret = JSON_ES;
 
     skip_delimiter(str, index, delimiters);
     len = strtok_len(&str[*index], delimiters, quote, &len_str);
     if (json_errno != JSON_E_DEFAULT)
     {
-        return JSON_EXIT_FAILURE;
+        return JSON_EF;
     }
     *token = malloc(sizeof(char) * (len + 1));
     if (*token == NULL)
     {
         json_errno = JSON_E_SYS_FAILURE;
-        ret = JSON_EXIT_FAILURE;
+        ret = JSON_EF;
     }
     else
     {
