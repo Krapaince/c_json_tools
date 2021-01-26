@@ -14,7 +14,6 @@ set(SRC_TEST
 	tests/getters/index/array.c
 	tests/getters/index/object.c
 	tests/getters/key/object.c
-	tests/getters/value/array.c
 	tests/parser/json_array_fd.c
 	tests/parser/json_array_filepath.c
 	tests/parser/json_array_str.c

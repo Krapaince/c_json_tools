@@ -59,9 +59,6 @@ set(SRC
 	src/getters/key/object/basic_type.c
 	src/getters/key/key.c
 	src/getters/key/object.c
-	src/getters/value/array/advanced_type.c
-	src/getters/value/array/basic_type.c
-	src/getters/value/array.c
 	src/parser/array_advanced_type.c
 	src/parser/array.c
 	src/parser/key.c
