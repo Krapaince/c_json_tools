@@ -1,18 +1,11 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** custom strtok
-*/
-
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include <error.h>
-#include <escape_character.h>
-#include <strtok.h>
+#include <json/internal/error.h>
+#include <json/internal/escape_character.h>
+#include <json/internal/strtok.h>
 
 static void skip_delimiter(char const* str, size_t* i_str,
                            char const* delimiters)

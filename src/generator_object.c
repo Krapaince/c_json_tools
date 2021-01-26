@@ -1,21 +1,14 @@
-/*
-** EPITECH PROJECT, 2020
-** jsin library
-** File description:
-** generator
-*/
-
 #include <fcntl.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
 
-#include <error.h>
-#include <generator.h>
-#include <generator/generate.h>
-#include <typedef/generator.h>
-#include <typedef/object.h>
+#include <json/internal/error.h>
+#include <json/internal/generator.h>
+#include <json/internal/generator/generate.h>
+#include <json/internal/typedef/generator.h>
+#include <json/internal/typedef/object.h>
 
 int json_object_generate_to_fd(json_object_t const* obj, int fd,
                                generator_setting_t const* setting)

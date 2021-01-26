@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** getters object type
-*/
-
-#include <typedef/array.h>
-#include <typedef/object.h>
+#include <json/internal/typedef/array.h>
+#include <json/internal/typedef/object.h>
 
 bool json_compare_element_type(json_type_t element_type, json_type_t type)
 {

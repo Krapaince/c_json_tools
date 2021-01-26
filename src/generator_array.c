@@ -1,21 +1,14 @@
-/*
-** EPITECH PROJECT, 2020
-** jsin library
-** File description:
-** generator
-*/
-
 #include <fcntl.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
 
-#include <error.h>
-#include <generator.h>
-#include <generator/generate.h>
-#include <typedef/array.h>
-#include <typedef/generator.h>
+#include <json/internal/error.h>
+#include <json/internal/generator.h>
+#include <json/internal/generator/generate.h>
+#include <json/internal/typedef/array.h>
+#include <json/internal/typedef/generator.h>
 
 int json_array_generate_to_fd(json_array_t const* array, int fd,
                               generator_setting_t const* setting)

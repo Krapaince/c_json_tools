@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** tests flag object
-*/
-
 #include <criterion/criterion.h>
 
-#include <parser/token/flag/object.h>
+#include <json/internal/parser/token/flag/object.h>
 
 Test(json_set_token_flag_obj, test_json_set_token_flag)
 {

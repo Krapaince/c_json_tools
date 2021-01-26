@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor compare object
-*/
-
-#include <editor/compare.h>
+#include <json/internal/editor/compare.h>
 #include <json/editor/compare.h>
-#include <typedef/object.h>
+#include <json/internal/typedef/object.h>
 
 bool json_compare_element(json_union_value_t const* value1, json_type_t type1,
                           json_union_value_t const* value2, json_type_t type2)

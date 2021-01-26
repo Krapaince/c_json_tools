@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** tests editor extract index array
-*/
-
 #include <criterion/criterion.h>
 
 #include <json/json.h>

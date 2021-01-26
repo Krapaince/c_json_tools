@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** parser.c
-*/
-
-#include <error.h>
-#include <parser.h>
-#include <parser/array.h>
-#include <parser/object.h>
+#include <json/internal/error.h>
+#include <json/internal/parser.h>
+#include <json/internal/parser/array.h>
+#include <json/internal/parser/object.h>
 
 // Because the function json_get_next_token doesn't know if the EOF shall be
 // reach, when the EOF is encounter it's always return and error. Here is a

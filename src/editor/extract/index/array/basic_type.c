@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** extract index array basic_type
-*/
-
-#include <editor/extract/index/array.h>
-#include <error.h>
-#include <typedef/array.h>
+#include <json/internal/editor/extract/index/array.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/array.h>
 
 int json_array_extract_bool_by_index(json_array_t* array, size_t index,
                                      bool* value)

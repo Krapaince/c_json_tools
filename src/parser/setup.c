@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** init.c parser
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <error.h>
-#include <typedef/parser.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/parser.h>
 
 static void json_init_parser(parser_t* parser, parser_type_t type)
 {

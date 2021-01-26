@@ -1,19 +1,12 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** parser file
-*/
-
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include <error.h>
-#include <parser.h>
-#include <strtok.h>
-#include <typedef/parser.h>
+#include <json/internal/error.h>
+#include <json/internal/parser.h>
+#include <json/internal/strtok.h>
+#include <json/internal/typedef/parser.h>
 
 static int json_get_next_lign(parser_t* parser)
 {

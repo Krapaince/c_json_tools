@@ -1,16 +1,9 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor unset index
-*/
-
 #include <string.h>
 
-#include <editor/destroy/union.h>
-#include <error.h>
-#include <typedef/array.h>
-#include <typedef/object.h>
+#include <json/internal/editor/destroy/union.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/array.h>
+#include <json/internal/typedef/object.h>
 
 int json_object_unset_element_by_index(json_object_t* obj, size_t index)
 {

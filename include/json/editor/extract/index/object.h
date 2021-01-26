@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json editor extract index object
-*/
-
 #ifndef JSON_EXTRACT_INDEX_OBJECT_H_
 #define JSON_EXTRACT_INDEX_OBJECT_H_
 

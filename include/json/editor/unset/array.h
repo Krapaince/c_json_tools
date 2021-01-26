@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json editor unset array
-*/
-
-#ifndef JSON_EXPORT_EDITOR_UNSET_ARRAY_H_
-#define JSON_EXPORT_EDITOR_UNSET_ARRAY_H_
+#ifndef JSON_EDITOR_UNSET_ARRAY_H_
+#define JSON_EDITOR_UNSET_ARRAY_H_
 
 #include <json/type/array.h>
 
@@ -41,4 +34,4 @@ int json_array_unset_elements_by_value_object(json_array_t* array,
 int json_array_unset_elements_by_value_array(json_array_t* array,
                                              json_array_t* value);
 
-#endif /* !JSON_EXPORT_EDITOR_UNSET_ARRAY_H_ */
+#endif /* !JSON_EDITOR_UNSET_ARRAY_H_ */

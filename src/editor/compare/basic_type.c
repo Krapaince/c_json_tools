@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** compare basic type
-*/
-
 #include <stdbool.h>
 #include <string.h>
 
-#include <typedef/type.h>
+#include <json/internal/typedef/type.h>
 
 bool json_compare_bool(bool first, bool second)
 {

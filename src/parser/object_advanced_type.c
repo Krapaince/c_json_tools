@@ -1,20 +1,13 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** advanced type object
-*/
-
 #include <stdlib.h>
 
-#include <editor/add/object.h>
-#include <error.h>
 #include <json/editor/destroy.h>
-#include <parser/array.h>
-#include <parser/object.h>
-#include <typedef/object.h>
-#include <typedef/parser.h>
-#include <typedef/token.h>
+#include <json/internal/editor/add/object.h>
+#include <json/internal/error.h>
+#include <json/internal/parser/array.h>
+#include <json/internal/parser/object.h>
+#include <json/internal/typedef/object.h>
+#include <json/internal/typedef/parser.h>
+#include <json/internal/typedef/token.h>
 
 int json_get_array_in_object(json_object_t* obj, parser_t* parser,
                              token_type_t* expected)

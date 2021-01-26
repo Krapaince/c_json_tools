@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** getters object index
-*/
-
-#include <editor/compare/type.h>
-#include <error.h>
-#include <getters/index/object.h>
-#include <typedef/object.h>
+#include <json/internal/editor/compare/type.h>
+#include <json/internal/error.h>
+#include <json/internal/getters/index/object.h>
+#include <json/internal/typedef/object.h>
 
 int json_object_extract_element_by_index_and_type(
     json_object_t* object, size_t index, json_type_t type,

@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor destroy object
-*/
-
 #include <stdlib.h>
 
-#include <editor/destroy/union.h>
-#include <typedef/object.h>
+#include <json/internal/editor/destroy/union.h>
+#include <json/internal/typedef/object.h>
 
 void json_object_destroy(json_object_t* obj)
 {

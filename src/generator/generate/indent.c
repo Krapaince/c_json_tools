@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** indent.c
-*/
-
-#include <error.h>
-#include <generator/generate.h>
-#include <typedef/generator.h>
+#include <json/internal/error.h>
+#include <json/internal/generator/generate.h>
+#include <json/internal/typedef/generator.h>
 
 int json_generate_indent(generator_t* generator)
 {

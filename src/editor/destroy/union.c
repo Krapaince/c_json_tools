@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor destroy union
-*/
-
 #include <stdlib.h>
 
 #include <json/editor/destroy.h>
-#include <typedef/array.h>
-#include <typedef/object.h>
+#include <json/internal/typedef/array.h>
+#include <json/internal/typedef/object.h>
 
 void json_union_value_destroy(json_union_value_t* value, json_type_t type)
 {

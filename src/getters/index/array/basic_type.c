@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** getters index array basic_type
-*/
-
-#include <error.h>
-#include <getters/index/array.h>
-#include <typedef/array.h>
+#include <json/internal/error.h>
+#include <json/internal/getters/index/array.h>
+#include <json/internal/typedef/array.h>
 
 int json_array_get_bool_by_index(json_array_t const* array, size_t index,
                                  bool* value)

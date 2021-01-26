@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** tests generator str
-*/
-
 #include <criterion/criterion.h>
 #include <string.h>
 

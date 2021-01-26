@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor set object
-*/
-
-#ifndef JSON_EXPORT_EDITOR_SET_KEY_OBJECT_H_
-#define JSON_EXPORT_EDITOR_SET_KEY_OBJECT_H_
+#ifndef JSON_EDITOR_SET_KEY_OBJECT_H_
+#define JSON_EDITOR_SET_KEY_OBJECT_H_
 
 #include <json/error.h>
 #include <json/type/array.h>
@@ -94,4 +87,4 @@ int json_object_set_object_by_key(json_object_t* obj, char const* key,
 int json_object_set_array_by_key(json_object_t* obj, char const* key,
                                  json_array_t* value);
 
-#endif /* !JSON_EXPORT_EDITOR_SET_KEY_OBJECT_H_ */
+#endif /* !JSON_EDITOR_SET_KEY_OBJECT_H_ */

@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json editor extract key object
-*/
-
-#ifndef JSON_EXPORT_EDITOR_EXTRACT_KEY_OBJECT_H_
-#define JSON_EXPORT_EDITOR_EXTRACT_KEY_OBJECT_H_
+#ifndef JSON_EDITOR_EXTRACT_KEY_OBJECT_H_
+#define JSON_EDITOR_EXTRACT_KEY_OBJECT_H_
 
 #include <json/error.h>
 #include <json/type/object.h>
@@ -91,4 +84,4 @@ int json_object_extract_object_by_key(json_object_t* obj, char const* key,
 int json_object_extract_array_by_key(json_object_t* obj, char const* key,
                                      json_array_t** value);
 
-#endif /* !JSON_EXPORT_EDITOR_EXTRACT_KEY_OBJECT_H_ */
+#endif /* !JSON_EDITOR_EXTRACT_KEY_OBJECT_H_ */

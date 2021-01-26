@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** array gatters
-*/
-
-#include <editor/compare.h>
-#include <editor/compare/type.h>
-#include <error.h>
-#include <typedef/array.h>
+#include <json/internal/editor/compare.h>
+#include <json/internal/editor/compare/type.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/array.h>
 
 static int json_array_get_index_by_value(json_array_t const* array,
                                          json_array_element_t const* element,

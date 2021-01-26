@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor unset arry by value
-*/
-
-#include <editor/compare.h>
-#include <editor/destroy/union.h>
-#include <typedef/array.h>
+#include <json/internal/editor/compare.h>
+#include <json/internal/editor/destroy/union.h>
+#include <json/internal/typedef/array.h>
 
 // Since the element that is used to compare may be an element inside our array
 // we need to keep it until the end of the array. In order to do that, the

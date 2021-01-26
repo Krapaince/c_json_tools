@@ -1,18 +1,11 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** parsing for object
-*/
-
-#include <error.h>
 #include <json/editor/create.h>
 #include <json/editor/destroy.h>
-#include <parser.h>
-#include <parser/object.h>
-#include <parser/token/flag/object.h>
-#include <parser/value/object.h>
-#include <parser/value/str.h>
+#include <json/internal/error.h>
+#include <json/internal/parser.h>
+#include <json/internal/parser/object.h>
+#include <json/internal/parser/token/flag/object.h>
+#include <json/internal/parser/value/object.h>
+#include <json/internal/parser/value/str.h>
 
 int json_get_next_token_object(json_object_t const* obj, parser_t* parser,
                                token_type_t* expected)

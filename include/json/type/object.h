@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json export object def
-*/
+#ifndef JSON_TYPE_OBJECT_H_
+#define JSON_TYPE_OBJECT_H_
 
-#ifndef JSON_EXPORT_OBJECT_H_
-#define JSON_EXPORT_OBJECT_H_
+#include <json/internal/typedef/object.h>
 
-#include <typedef/object.h>
-
-#endif /* !JSON_EXPORT_OBJECT_H_ */
+#endif /* !JSON_TYPE_OBJECT_H_ */

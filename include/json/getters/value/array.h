@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json getters value array
-*/
-
-#ifndef JSON_EXPORT_GETTERS_VALUE_ARRAY_H_
-#define JSON_EXPORT_GETTERS_VALUE_ARRAY_H_
+#ifndef JSON_GETTERS_VALUE_ARRAY_H_
+#define JSON_GETTERS_VALUE_ARRAY_H_
 
 #include <json/error.h>
 #include <json/type/array.h>
@@ -95,4 +88,4 @@ int json_array_get_index_by_object_value(json_array_t const* array,
 int json_array_get_index_by_array_value(json_array_t const* array,
                                         json_array_t* value, size_t* index);
 
-#endif /* !JSON_EXPORT_GETTERS_VALUE_ARRAY_H_ */
+#endif /* !JSON_GETTERS_VALUE_ARRAY_H_ */

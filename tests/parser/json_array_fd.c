@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** tests parser and generator array fd
-*/
-
 #include <criterion/criterion.h>
 #include <criterion/redirect.h>
 #include <fcntl.h>

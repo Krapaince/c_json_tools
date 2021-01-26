@@ -1,16 +1,9 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** strtok test
-*/
-
 #include <criterion/criterion.h>
 #include <string.h>
 
-#include <error.h>
-#include <strtok.h>
-#include <typedef/parser.h>
+#include <json/internal/error.h>
+#include <json/internal/strtok.h>
+#include <json/internal/typedef/parser.h>
 
 Test(my_strtok, test_strtok_with_quote)
 {

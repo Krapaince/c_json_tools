@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** flag
-*/
-
-#include <error.h>
-#include <typedef/token.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/token.h>
 
 void json_set_flag_error_synthax(token_type_t* expected)
 {

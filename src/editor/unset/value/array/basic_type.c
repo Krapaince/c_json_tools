@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor unset array basic type
-*/
-
 #include <string.h>
 
-#include <editor/unset.h>
-#include <typedef/array.h>
+#include <json/internal/editor/unset.h>
+#include <json/internal/typedef/array.h>
 
 int json_array_unset_elements_by_value_bool(json_array_t* array, bool value)
 {

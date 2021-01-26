@@ -1,16 +1,9 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** key name.c
-*/
-
 #include <stddef.h>
 #include <string.h>
 
-#include <error.h>
-#include <typedef/object.h>
-#include <typedef/token.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/object.h>
+#include <json/internal/typedef/token.h>
 
 int json_does_key_already_exist(json_object_t const* obj, token_t const* token)
 {

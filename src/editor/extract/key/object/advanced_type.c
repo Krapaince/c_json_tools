@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor extract key object advanced_type
-*/
-
-#include <editor/extract/key/object.h>
-#include <error.h>
+#include <json/internal/editor/extract/key/object.h>
+#include <json/internal/error.h>
 
 int json_object_extract_object_by_key(json_object_t* obj, char const* key,
                                       json_object_t** value)

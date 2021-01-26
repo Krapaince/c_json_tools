@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json editor extract index array
-*/
-
-#ifndef JSON_EXPORT_EDITOR_EXTRACT_INDEX_ARRAY_H_
-#define JSON_EXPORT_EDITOR_EXTRACT_INDEX_ARRAY_H_
+#ifndef JSON_EDITOR_EXTRACT_INDEX_ARRAY_H_
+#define JSON_EDITOR_EXTRACT_INDEX_ARRAY_H_
 
 #include <json/error.h>
 #include <json/type/array.h>
@@ -93,4 +86,4 @@ int json_array_extract_object_by_index(json_array_t* array, size_t index,
 int json_array_extract_array_by_index(json_array_t* array, size_t index,
                                       json_array_t** value);
 
-#endif /* !JSON_EXPORT_EDITOR_EXTRACT_INDEX_ARRAY_H_ */
+#endif /* !JSON_EDITOR_EXTRACT_INDEX_ARRAY_H_ */

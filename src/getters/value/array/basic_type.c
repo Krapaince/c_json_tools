@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json getters value array
-*/
-
 #include <string.h>
 
-#include <getters/value/array.h>
-#include <typedef/array.h>
+#include <json/internal/getters/value/array.h>
+#include <json/internal/typedef/array.h>
 
 int json_array_get_index_by_bool_value(json_array_t const* array, bool value,
                                        size_t* index)

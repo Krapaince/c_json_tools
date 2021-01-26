@@ -1,16 +1,9 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** errno.c
-*/
-
 #include <errno.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <string.h>
 
-#include <error.h>
+#include <json/internal/error.h>
 
 static const json_error_t errors[] = {
     {JSON_E_DEFAULT, "No error", NONE},

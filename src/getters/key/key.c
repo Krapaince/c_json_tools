@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** getters key key
-*/
-
-#include <getters/key/object.h>
-#include <typedef/object.h>
+#include <json/internal/getters/key/object.h>
+#include <json/internal/typedef/object.h>
 
 bool json_object_does_key_exist(json_object_t const* obj, char const* key)
 {

@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** generator object
-*/
-
-#include <error.h>
-#include <generator/generate.h>
-#include <typedef/generator.h>
-#include <typedef/object.h>
+#include <json/internal/error.h>
+#include <json/internal/generator/generate.h>
+#include <json/internal/typedef/generator.h>
+#include <json/internal/typedef/object.h>
 
 static void json_generate_object_setup_context(generator_t* generator,
                                                json_object_t const* obj)

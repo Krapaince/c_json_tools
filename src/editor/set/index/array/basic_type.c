@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor set index array basic_type
-*/
-
 #include <string.h>
 
-#include <editor/destroy/union.h>
-#include <error.h>
-#include <typedef/array.h>
+#include <json/internal/editor/destroy/union.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/array.h>
 
 int json_array_set_bool_by_index(json_array_t* array, size_t index, bool value)
 {

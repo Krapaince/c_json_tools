@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** test append object
-*/
-
 #include <criterion/criterion.h>
 
 #include <json/editor/append.h>

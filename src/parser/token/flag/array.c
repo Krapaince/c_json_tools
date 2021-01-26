@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** array.c
-*/
-
-#include <error.h>
-#include <parser/token/flag.h>
-#include <parser/token/flag/array.h>
-#include <typedef/token.h>
-#include <typedef/token/flag.h>
+#include <json/internal/error.h>
+#include <json/internal/parser/token/flag.h>
+#include <json/internal/parser/token/flag/array.h>
+#include <json/internal/typedef/token.h>
+#include <json/internal/typedef/token/flag.h>
 
 static selector_token_flag_t const array_flags[] = {
     {T_L_SQ_BRACKET, json_update_token_flag_array_l_sq_bracket},

@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** token
-*/
-
 #include <stddef.h>
 
-#include <error.h>
-#include <generator/generate.h>
-#include <typedef/token.h>
+#include <json/internal/error.h>
+#include <json/internal/generator/generate.h>
+#include <json/internal/typedef/token.h>
 
 int json_generate_type(generator_t* generator, token_type_t type)
 {

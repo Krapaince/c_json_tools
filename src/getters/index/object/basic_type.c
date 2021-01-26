@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** getters object index basic_type.c
-*/
-
-#include <error.h>
-#include <getters/index/object.h>
-#include <typedef/object.h>
+#include <json/internal/error.h>
+#include <json/internal/getters/index/object.h>
+#include <json/internal/typedef/object.h>
 
 int json_object_get_bool_by_index(json_object_t const* object, size_t index,
                                   bool* value)

@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** token.c
-*/
-
-#include <parser.h>
-#include <typedef/parser.h>
+#include <json/internal/parser.h>
+#include <json/internal/typedef/parser.h>
 
 int json_parser_find_next_token(parser_t* parser)
 {

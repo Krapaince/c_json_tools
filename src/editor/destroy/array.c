@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** destroy.c
-*/
-
 #include <stddef.h>
 #include <stdlib.h>
 
-#include <editor/destroy/union.h>
-#include <typedef/array.h>
+#include <json/internal/editor/destroy/union.h>
+#include <json/internal/typedef/array.h>
 
 void json_array_destroy(json_array_t* array)
 {

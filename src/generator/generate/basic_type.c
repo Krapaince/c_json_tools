@@ -1,19 +1,12 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** write basic type
-*/
-
 #include <limits.h>
 #include <stdio.h>
 
-#include <error.h>
-#include <escape_character.h>
-#include <generator/generate.h>
-#include <typedef/escape_character.h>
-#include <typedef/generator.h>
-#include <typedef/type.h>
+#include <json/internal/error.h>
+#include <json/internal/escape_character.h>
+#include <json/internal/generator/generate.h>
+#include <json/internal/typedef/escape_character.h>
+#include <json/internal/typedef/generator.h>
+#include <json/internal/typedef/type.h>
 
 static size_t json_compute_nb_len(int nb)
 {

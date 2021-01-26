@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor object key
-*/
-
 #include <string.h>
 
-#include <error.h>
 #include <json/getters/object.h>
-#include <typedef/object.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/object.h>
 
 int json_assign_key_to_element(json_object_element_t* element, char const* key)
 {

@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** getters key object basic type
-*/
-
-#include <error.h>
-#include <getters/key/object.h>
-#include <typedef/object.h>
+#include <json/internal/error.h>
+#include <json/internal/getters/key/object.h>
+#include <json/internal/typedef/object.h>
 
 int json_object_get_bool_by_key(json_object_t const* obj, char const* key,
                                 bool* value)

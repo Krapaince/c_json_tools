@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** add advanced type
-*/
-
 #include <string.h>
 
-#include <editor/add/array.h>
-#include <typedef/array.h>
+#include <json/internal/editor/add/array.h>
+#include <json/internal/typedef/array.h>
 
 int json_array_add_array(json_array_t* array, json_array_t* value)
 {

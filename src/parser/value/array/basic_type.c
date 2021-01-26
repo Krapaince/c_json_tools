@@ -1,17 +1,10 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** add basic type to an array
-*/
-
 #include <stdlib.h>
 
-#include <editor/add/array.h>
-#include <error.h>
-#include <parser/value/str.h>
-#include <typedef/array.h>
-#include <typedef/token.h>
+#include <json/internal/editor/add/array.h>
+#include <json/internal/error.h>
+#include <json/internal/parser/value/str.h>
+#include <json/internal/typedef/array.h>
+#include <json/internal/typedef/token.h>
 
 int json_parser_array_append_bool(json_array_t* array, token_t* token)
 {

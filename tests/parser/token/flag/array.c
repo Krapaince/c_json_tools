@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** test array flag
-*/
-
 #include <criterion/criterion.h>
 
-#include <parser/token/flag/array.h>
+#include <json/internal/parser/token/flag/array.h>
 
 Test(json_set_token_flag_array, test_update_token_flag_array)
 {

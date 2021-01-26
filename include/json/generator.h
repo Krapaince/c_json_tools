@@ -1,16 +1,9 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json.h
-*/
-
-#ifndef JSON_EXPORT_GENERATOR_H_
-#define JSON_EXPORT_GENERATOR_H_
+#ifndef JSON_GENERATOR_H_
+#define JSON_GENERATOR_H_
 
 #include <json/type/array.h>
 #include <json/type/object.h>
-#include <typedef/generator.h>
+#include <json/internal/typedef/generator.h>
 
 // generates a JSON object to the file descriptor (fd) from the obj.
 // The file descriptor won't be closed after the generation of the object.
@@ -156,4 +149,4 @@ int json_array_generate_to_string(json_array_t const* array,
                                   generator_setting_t const* setting,
                                   char** strptr);
 
-#endif /* !JSON_EXPORT_GENERATOR_H_ */
+#endif /* !JSON_GENERATOR_H_ */

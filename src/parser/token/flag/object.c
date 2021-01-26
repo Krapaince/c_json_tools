@@ -1,18 +1,11 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** object flag update function
-*/
-
 #include <stdbool.h>
 #include <stddef.h>
 
-#include <error.h>
-#include <parser/token/flag.h>
-#include <parser/token/flag/object.h>
-#include <typedef/token.h>
-#include <typedef/token/flag.h>
+#include <json/internal/error.h>
+#include <json/internal/parser/token/flag.h>
+#include <json/internal/parser/token/flag/object.h>
+#include <json/internal/typedef/token.h>
+#include <json/internal/typedef/token/flag.h>
 
 static selector_token_flag_t const obj_flags[] = {
     {T_L_SQ_BRACKET, json_update_token_flag_obj_l_sq_bracket},

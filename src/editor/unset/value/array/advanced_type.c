@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** editor unset array advanced type
-*/
-
-#include <editor/unset.h>
-#include <typedef/array.h>
-#include <typedef/object.h>
+#include <json/internal/editor/unset.h>
+#include <json/internal/typedef/array.h>
+#include <json/internal/typedef/object.h>
 
 int json_array_unset_elements_by_value_object(json_array_t* array,
                                               json_object_t* value)

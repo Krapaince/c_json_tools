@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** write union
-*/
-
-#include <error.h>
-#include <generator.h>
-#include <generator/generate.h>
-#include <typedef/generator.h>
-#include <typedef/type.h>
+#include <json/internal/error.h>
+#include <json/internal/generator.h>
+#include <json/internal/generator/generate.h>
+#include <json/internal/typedef/generator.h>
+#include <json/internal/typedef/type.h>
 
 int json_generate_union_value(generator_t* generator,
                               json_union_value_t const* value, json_type_t type)

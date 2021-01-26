@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** escape_character.c
-*/
-
 #include <stdlib.h>
 #include <string.h>
 
-#include <escape_character.h>
-#include <typedef/escape_character.h>
+#include <json/internal/escape_character.h>
+#include <json/internal/typedef/escape_character.h>
 
 static escape_character_t const escape_chars[] = {
     {ESCAPE_CHARACTER[D_QUOTE], "\\\"", 2},

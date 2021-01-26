@@ -1,18 +1,11 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** type.c
-*/
-
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include <error.h>
-#include <parser.h>
-#include <typedef/parser.h>
+#include <json/internal/error.h>
+#include <json/internal/parser.h>
+#include <json/internal/typedef/parser.h>
 
 token_t const* json_get_next_know_token(char const* str)
 {

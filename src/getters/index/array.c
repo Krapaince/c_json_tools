@@ -1,13 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** getters array index
-*/
-
-#include <editor/compare/type.h>
-#include <error.h>
-#include <typedef/array.h>
+#include <json/internal/editor/compare/type.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/array.h>
 
 static int json_array_get_const_element_by_index(
     json_array_t const* array, size_t index,

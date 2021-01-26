@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** setup and teardown
-*/
-
 #include <string.h>
 
-#include <error.h>
-#include <typedef/generator.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/generator.h>
 
 static int json_setup_indent(generator_t* generator,
                              generator_setting_t const* user_setting)

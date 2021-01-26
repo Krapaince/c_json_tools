@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** append array.c
-*/
-
 #include <stdlib.h>
 
-#include <error.h>
-#include <typedef/array.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/array.h>
 
 static int json_array_increase_size(json_array_t* array)
 {

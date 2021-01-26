@@ -1,11 +1,4 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** type
-*/
-
-#include <typedef/token.h>
+#include <json/internal/typedef/token.h>
 
 token_t const tokens[] = {{T_COMMA, ",", 1},        {T_L_BRACKET, "{", 1},
                           {T_R_BRACKET, "}", 1},    {T_L_SQ_BRACKET, "[", 1},

@@ -1,14 +1,7 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json append array
-*/
+#ifndef JSON_EDITOR_APPEND_ARRAY_H_
+#define JSON_EDITOR_APPEND_ARRAY_H_
 
-#ifndef JSON_EXPORT_APPEND_ARRAY_H_
-#define JSON_EXPORT_APPEND_ARRAY_H_
-
-#include <json/error.h>
+#include <json/internal/error.h>
 #include <json/type/array.h>
 
 // Adds an element of type JSON_BOOL at the end of the array.
@@ -77,4 +70,4 @@ int json_array_append_array(json_array_t* array, json_array_t* value);
 //
 int json_array_append_object(json_array_t* array, json_object_t* value);
 
-#endif /* !JSON_EXPORT_APPEND_ARRAY_H_ */
+#endif /* !JSON_INTERNAL_EDITOR_APPEND_ARRAY_H_ */

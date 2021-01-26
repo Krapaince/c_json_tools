@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json create
-*/
-
-#ifndef JSON_EXPORT_EDITOR_CREATE_H_
-#define JSON_EXPORT_EDITOR_CREATE_H_
+#ifndef JSON_EDITOR_CREATE_H_
+#define JSON_EDITOR_CREATE_H_
 
 #include <json/type/array.h>
 #include <json/type/object.h>
@@ -31,4 +24,4 @@ json_array_t* json_array_create(void);
 //
 json_object_t* json_object_create(void);
 
-#endif /* !JSON_EXPORT_EDITOR_CREATE_H_ */
+#endif /* !JSON_EDITOR_CREATE_H_ */

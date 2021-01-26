@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** array bracket flag update functions
-*/
-
-#include <parser/token/flag/object.h>
-#include <typedef/token.h>
+#include <json/internal/parser/token/flag/object.h>
+#include <json/internal/typedef/token.h>
 
 void json_update_token_flag_array_l_sq_bracket(token_type_t* expected)
 {

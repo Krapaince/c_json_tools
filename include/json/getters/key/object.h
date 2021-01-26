@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** getters index object
-*/
-
-#ifndef JSON_EXPORT_GETTERS_KEY_OBJECT_H_
-#define JSON_EXPORT_GETTERS_KEY_OBJECT_H_
+#ifndef JSON_GETTERS_KEY_OBJECT_H_
+#define JSON_GETTERS_KEY_OBJECT_H_
 
 #include <json/error.h>
 #include <json/type/object.h>
@@ -108,4 +101,4 @@ int json_object_get_array_by_key(json_object_t const* obj, char const* key,
 //   FALSE if it haven't match with an element
 bool json_object_does_key_exist(json_object_t const* obj, char const* key);
 
-#endif /* !JSON_EXPORT_GETTERS_KEY_OBJECT_H_ */
+#endif /* !JSON_GETTERS_KEY_OBJECT_H_ */

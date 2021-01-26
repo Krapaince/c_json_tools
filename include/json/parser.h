@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** json parser function
-*/
-
-#ifndef JSON_EXPORT_PARSER_H_
-#define JSON_EXPORT_PARSER_H_
+#ifndef JSON_PARSER_H_
+#define JSON_PARSER_H_
 
 #include <json/type/array.h>
 #include <json/type/object.h>
@@ -83,4 +76,4 @@ json_object_t* json_object_parse_from_str(char const* str, size_t* index);
 //
 json_array_t* json_array_parse_from_str(char const* str, size_t* index);
 
-#endif /* !JSON_EXPORT_PARSER_H_ */
+#endif /* !JSON_PARSER_H_ */

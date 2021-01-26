@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** parser str
-*/
-
-#include <error.h>
 #include <json/editor/destroy.h>
-#include <parser.h>
-#include <parser/array.h>
-#include <parser/object.h>
+#include <json/internal/error.h>
+#include <json/internal/parser.h>
+#include <json/internal/parser/array.h>
+#include <json/internal/parser/object.h>
 
 static void json_parse_update_index(size_t* index, size_t parser_index)
 {

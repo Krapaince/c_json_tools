@@ -1,15 +1,8 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** parser teardown.c
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <error.h>
-#include <parser.h>
+#include <json/internal/error.h>
+#include <json/internal/parser.h>
 
 static void json_teardown_parser(parser_t* parser)
 {

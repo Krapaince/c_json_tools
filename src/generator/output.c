@@ -1,16 +1,9 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** generator output
-*/
-
 #include <string.h>
 #include <unistd.h>
 
-#include <error.h>
-#include <typedef/generator.h>
-#include <typedef/token.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/generator.h>
+#include <json/internal/typedef/token.h>
 
 static int json_generate_write_to_output(generator_t* generator)
 {

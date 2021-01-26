@@ -1,11 +1,4 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** other obj token update function
-*/
-
-#include <typedef/token.h>
+#include <json/internal/typedef/token.h>
 
 void json_update_token_flag_obj_key(token_type_t* expected)
 {

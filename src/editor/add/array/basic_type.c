@@ -1,16 +1,9 @@
-/*
-** EPITECH PROJECT, 2020
-** json library
-** File description:
-** add basic type
-*/
-
 #include <stdlib.h>
 #include <string.h>
 
-#include <editor/add/array.h>
-#include <error.h>
-#include <typedef/array.h>
+#include <json/internal/editor/add/array.h>
+#include <json/internal/error.h>
+#include <json/internal/typedef/array.h>
 
 int json_array_add_bool(json_array_t* array, bool value)
 {
