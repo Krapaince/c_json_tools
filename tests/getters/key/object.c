@@ -2,8 +2,8 @@
 
 #include <json/editor/destroy.h>
 #include <json/getters/object.h>
-#include <json/parser.h>
 #include <json/internal/parser/object.h>
+#include <json/parser.h>
 
 Test(json_object_get_bool_value_by_key, test_json_object_get_bool_value_by_key)
 {
