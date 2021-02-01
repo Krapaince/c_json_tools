@@ -6,12 +6,30 @@
 
 #include <json/internal/typedef/error_code.h>
 
+/**
+ * @defgroup ErrorErrno
+ * @{
+ */
+
+/**
+ * \b Internal \b purpose \b only
+ *
+ * The internal errno function of this library.
+ */
 extern unsigned char* json_errno_location(void);
 
-// Access to the value of the error
+/**
+ * Just a simple define to simplify the access to the errno's value.
+ */
 #define json_errno (*json_errno_location())
 
-// Write into the stream the error details
+/**
+ * This function writes an error accordong to the value or ``json_errno``.
+ */
 void json_print_error(FILE* stream);
+
+/**
+ * @}
+ */
 
 #endif /* !JSON_ERROR_H_ */

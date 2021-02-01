@@ -3,12 +3,22 @@
 
 #include <json/type/object.h>
 
-// Unsets an element and remove it from the obj.
-// Return the number of element(s) unsets.
+/**
+ * @defgroup EditorUnsetObjectKey
+ * @{
+ */
+
 size_t json_object_unset_element_by_key(json_object_t* obj, char const* key);
 
-// Unsets an element and remove it from the obj.
-// Return the number of element(s) unsets.
+/** @} */
+
+/**
+ * @defgroup EditorUnsetObjectIndex
+ * @{
+ */
+
 size_t json_object_unset_element_by_index(json_object_t* obj, size_t index);
+
+/** @} */
 
 #endif /* !JSON_EDITOR_UNSET_OBJECT_H_ */
