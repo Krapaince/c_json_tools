@@ -5,7 +5,7 @@
 #include <json/internal/parser/object.h>
 
 // Because the function json_get_next_token doesn't know if the EOF shall be
-// reach, when the EOF is encounter it's always return and error. Here is a
+// reach, when the EOF is encounter it always returns an error. Here is a
 // catch for the invalid eof.
 static int json_does_eof_is_valid(parser_t* parser, void* json_ptr)
 {
