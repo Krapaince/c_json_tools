@@ -10,10 +10,39 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os, subprocess
 import sys
 import sphinx_rtd_theme
 # sys.path.insert(0, os.path.abspath('.'))
+
+# Readthedocs.io
+def configureDoxyfile(input_dir, output_dir, inc_path):
+    with open('Doxyfile.in', 'r') as file :
+        filedata = file.read()
+
+    filedata = filedata.replace('@DOXYGEN_INPUT_DIR@', input_dir)
+    filedata = filedata.replace('@DOXYGEN_OUTPUT_DIR@', output_dir)
+    filedata = filedata.replace('@DOXYGEN_INC_PATH@', inc_path)
+
+    with open('Doxyfile', 'w') as file :
+        file.write(filedata)
+
+read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
+
+breathe_projects = {}
+
+if read_the_docs_build:
+    input_dir = '../src ../include'
+    output_dir = 'build'
+    inc_path = '../include'
+    configureDoxyfile(input_dir, output_dir, inc_path)
+    subprocess.call('doxygen', shell=True)
+    subprocess.call('cat Doxyfile', shell=True)
+    subprocess.call('ls -la .', shell=True)
+    subprocess.call('ls -la ./build', shell=True)
+    subprocess.call('ls -la ./build/xml', shell=True)
+    breathe_projects = { "krapaince_c_json_tools": output_dir + '/xml' }
+    print(breathe_projects)
 
 # -- Project information -----------------------------------------------------
 
@@ -56,5 +85,4 @@ html_theme = "sphinx_rtd_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-breathe_projects = {}
 breathe_default_project = "krapaince_c_json_tools"
