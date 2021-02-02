@@ -57,5 +57,4 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
 breathe_projects = {}
-breathe_projects["krapaince_c_json_tools"] = "../build/doc/doxygen/xml"
 breathe_default_project = "krapaince_c_json_tools"
