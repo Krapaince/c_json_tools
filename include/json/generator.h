@@ -20,8 +20,8 @@
  * @param fd        A valid file descriptor
  * @param setting   Setting for the formatting
  *
- * @note If ``setting`` is null than the indent type will be set to ``SPACE``
- * and the indent size to 4.
+ * @note If ``setting`` is null than the indent type will be set to \b SPACE
+ * and the indent size to \b 4.
  *
  * @retval JSON_EF On failure
  * @retval JSON_ES On success
@@ -41,8 +41,8 @@ int json_object_generate_to_fd(json_object_t const* obj, int fd,
  * @param filepath  The file in which the object will be exported
  * @param setting   Setting for the formatting
  *
- *  @note If ``setting`` is null than the indent type will be set to ``SPACE``
- * and the indent size to 4.
+ *  @note If ``setting`` is null than the indent type will be set to \b SPACE
+ * and the indent size to \b 4.
  *
  * @retval JSON_EF On failure
  * @retval JSON_ES On success
@@ -62,8 +62,8 @@ int json_object_generate_to_file(json_object_t const* obj, char const* filepath,
  * exported object
  * @param setting   Setting for the formatting
  *
- * @note If setting is null than the indent type will be set to SPACE and the
- * indent size to 4.
+ * @note If setting is null than the indent type will be set to \b SPACE and the
+ * indent size to \b 4.
  *
  * @retval JSON_EF On failure
  * @retval JSON_ES On success
@@ -89,8 +89,8 @@ int json_object_generate_to_string(json_object_t const* object,
  * @param fd        A valid file descriptor
  * @param setting   Setting for the formatting
  *
- * @note If ``setting`` is null than the indent type will be set to ``SPACE``
- * and the indent size to 4.
+ * @note If ``setting`` is null than the indent type will be set to \b SPACE
+ * and the indent size to \b 4.
  *
  * @retval JSON_EF On failure
  * @retval JSON_ES On success
@@ -110,8 +110,8 @@ int json_array_generate_to_fd(json_array_t const* array, int fd,
  * @param filepath  The file in which the object will be exported
  * @param setting   Setting for the formatting
  *
- *  @note If ``setting`` is null than the indent type will be set to ``SPACE``
- * and the indent size to 4.
+ *  @note If ``setting`` is null than the indent type will be set to \b SPACE
+ * and the indent size to \b 4.
  *
  * @retval JSON_EF On failure
  * @retval JSON_ES On success
@@ -131,8 +131,8 @@ int json_array_generate_to_file(json_array_t const* array, char const* filepath,
  * exported array
  * @param setting   Setting for the formatting
  *
- * @note If setting is null than the indent type will be set to SPACE and the
- * indent size to 4.
+ * @note If setting is null than the indent type will be set to \b SPACE and the
+ * indent size to \b 4.
  *
  * @retval JSON_EF On failure
  * @retval JSON_ES On success
