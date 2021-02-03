@@ -9,6 +9,7 @@ The library provides two famillies of function:
 For each of this families those operations are available:
 
 * Append
+* Compare
 * Create
 * Destroy
 * Extract

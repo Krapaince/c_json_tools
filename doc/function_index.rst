@@ -20,6 +20,11 @@ The ``json_object_append_*`` append ``value`` at the end of the object.
 
 .. doxygengroup:: EditorAppendObject
 
+Compare
+^^^^^^^
+
+.. doxygengroup:: EditorCompareObject
+
 
 Create
 ^^^^^^
@@ -151,6 +156,12 @@ The ``json_array_append_*`` append ``value`` at the end of the array.
 * On success **JSON_ES**
 
 .. doxygengroup:: EditorAppendArray
+
+
+Compare
+^^^^^^^
+
+.. doxygengroup:: EditorCompareArray
 
 
 Create
