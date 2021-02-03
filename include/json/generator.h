@@ -51,7 +51,7 @@ int json_object_generate_to_fd(json_object_t const* obj, int fd,
 int json_object_generate_to_file(json_object_t const* obj, char const* filepath,
                                  generator_setting_t const* setting);
 
-/*
+/**
  * The function generates ``obj`` to ``*strptr``.
  *
  * In case of failure ``json_errno`` will be set and *strptr will be left
@@ -120,7 +120,7 @@ int json_array_generate_to_fd(json_array_t const* array, int fd,
 int json_array_generate_to_file(json_array_t const* array, char const* filepath,
                                 generator_setting_t const* setting);
 
-/*
+/**
  * The function generates ``array`` to ``*strptr``.
  *
  * In case of failure ``json_errno`` will be set and *strptr will be left
