@@ -4,24 +4,38 @@
 #include <json/type/array.h>
 #include <json/type/object.h>
 
-// json_array_create allocates a new json_array_t
-//
-// Return:
-//   Failure: NULL
-//   Success: A pointer to a new json_array_t
-//
-// In case of failure, json_errno is set to SYS_FAILURE.
-//
+/**
+ * @defgroup EditorCreateArray
+ * @{
+ */
+
+/**
+ * The function creates an empty ``json_array_t``.
+ *
+ * @return On success the function returns a pointer to a new
+ * ``json_array_t``. On failure \b NULL is returned and ``json_errno`` is set to
+ * \b JSON_E_SYS_FAILURE.
+ *
+ */
 json_array_t* json_array_create(void);
 
-// json_create_object allocates a new json_object_t
-//
-// Return:
-//   Failure: NULL
-//   Success: A pointer to a new json_object_t
-//
-// In case of failure, json_errno is set to SYS_FAILURE.
-//
+/** @} */
+
+/**
+ * @defgroup EditorCreateObject
+ * @{
+ */
+
+/**
+ * The function creates an empty ``json_object_t``.
+ *
+ * @return On success the function returns a pointer to a new
+ * ``json_object_t``. On failure \b NULL is returned and ``json_errno`` is set
+ * to \b JSON_E_SYS_FAILURE.
+ *
+ */
 json_object_t* json_object_create(void);
+
+/** @} */
 
 #endif /* !JSON_EDITOR_CREATE_H_ */
