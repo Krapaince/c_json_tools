@@ -1,7 +1,7 @@
 Introduction
 ============
 
-C JSON Tools provide tools to parse, edit and generate.
+C JSON Tools provide tools to parse, edit and generate json file.
 
 
 .. WARNING::

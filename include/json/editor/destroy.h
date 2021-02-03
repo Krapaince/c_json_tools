@@ -10,7 +10,7 @@
  */
 
 /**
- * The function releases the allocated resources of ``obj``.
+ * The function releases the allocated resources for ``obj``.
  */
 void json_object_destroy(json_object_t* obj);
 
@@ -22,7 +22,7 @@ void json_object_destroy(json_object_t* obj);
  */
 
 /**
- * The function releases the allocated resources of ``array``.
+ * The function releases the allocated resources for``array``.
  */
 void json_array_destroy(json_array_t* array);
 

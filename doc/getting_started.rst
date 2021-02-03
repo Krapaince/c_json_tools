@@ -6,7 +6,7 @@ The library provides two famillies of function:
 * json_array
 * json_object
 
-For each of this famillies those operations are available:
+For each of this families those operations are available:
 
 * Append
 * Create

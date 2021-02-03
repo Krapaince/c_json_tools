@@ -15,8 +15,8 @@ The ``json_object_append_*`` append ``value`` at the end of the object.
 * On success **JSON_ES**
 
 .. NOTE::
-   If the key already exist in the object the function fails and ``json_errno`` is
-   set to **JSON_E_KEY_ALREADY_EXIST**.
+   If the key already exists in the object the function fails and ``json_errno``
+   is set to **JSON_E_KEY_ALREADY_EXIST**.
 
 .. doxygengroup:: EditorAppendObject
 
@@ -122,14 +122,14 @@ Unset
 
 The ``json_object_unset_element_by_key`` function unsets the element at ``key``
 and remove it from the ``object``.
-Return the number of unset element.
+Return the number of unset elements.
 
 .. doxygengroup:: EditorUnsetObjectKey
 
 
 The ``json_object_unset_element_by_index`` function unsets the element at
 ``index`` and remove it from the ``object``.
-Return the number of unset element.
+Return the number of unset elements.
 
 .. doxygengroup:: EditorUnsetObjectIndex
 
@@ -168,8 +168,8 @@ Destroy
 Extract
 ^^^^^^^
 
-The ``json_array_extract_*_by_index`` extracts the ``value`` from the ``array``
-and sets ``*value`` with it. The ``array`` value is then set to **JSON_NULL**
+The ``json_array_extract_*_by_index`` extract the ``value`` from the ``array``
+and set ``*value`` with it. The ``array`` value is then set to **JSON_NULL**
 type. If the ``index`` is out of bound or the ``value``'s type at ``index``
 doesn't match, the function fails and both ``value`` and ``array`` are left
 untouched.
@@ -213,7 +213,7 @@ Parser
 Set
 ^^^
 
-The ``json_array_set_*_by_index`` sets the ``value`` at ``index`` in the
+The ``json_array_set_*_by_index`` set the ``value`` at ``index`` in the
 ``array``. If the ``index`` is out of the bound the function succeeds.
 Otherwise, the function fails and ``array`` if left untouched.
 
@@ -235,7 +235,7 @@ Return the number of unset element.
 .. doxygengroup:: EditorUnsetArrayIndex
 
 
-The ``json_array_unset_element_by_value_*`` functions unsets all elements which
+The ``json_array_unset_element_by_value_*`` functions unset all elements which
 match ``value`` and remove them from the ``array``.
 Return the number of unset element(s).
 

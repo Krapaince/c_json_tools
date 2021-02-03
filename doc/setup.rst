@@ -24,7 +24,7 @@ Installing
    to be used in real project for now. See `here <https://github.com/Krapaince/c_json_tools#context--/>`_
    for the why.
 
-The library can still be install even without it. Once build the library can
+The library can still be installed even without it. Once build the library can
 be found in the following folder: **build/lib/**.
 
 To go with the library you may need the header files to. They are located in
