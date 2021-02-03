@@ -41,7 +41,7 @@ int main(void)
 You can find the documentation
 [here](https://c-json-tools.readthedocs.io/en/latest/). If you want an offline
 version have a look
-[here](https://github.com/Krapaince/c_json_tools#api-documentation--).
+[here](https://github.com/Krapaince/c_json_tools#build-the-documentation).
 
 ## Context
 

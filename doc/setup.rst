@@ -21,7 +21,7 @@ Installing
 .. WARNING::
 
    There isn't any install official script yet because the library is not meant
-   to be used in real project for now. See `here <https://github.com/Krapaince/c_json_tools#context--/>`_
+   to be used in real project for now. See `here <https://github.com/Krapaince/c_json_tools#context>`_
    for the why.
 
 The library can still be installed even without it. Once build the library can
