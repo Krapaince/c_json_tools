@@ -19,7 +19,7 @@
  * @note ``json_errno`` is reset before the parsing of the object.
  *
  * @retval NULL On failure
- * @retval A pointer to an allocated ``json_object_t``.
+ * @retval ptr A pointer to an allocated ``json_object_t``.
  */
 json_object_t* json_object_parse_from_fd(int fd);
 
@@ -32,7 +32,7 @@ json_object_t* json_object_parse_from_fd(int fd);
  * @note ``json_errno`` is reset before the parsing of the object.
  *
  * @retval NULL On failure
- * @retval A pointer to an allocated ``json_object_t``.
+ * @retval ptr A pointer to an allocated ``json_object_t``.
  *
  */
 json_object_t* json_object_parse_from_filepath(char const* filepath);
@@ -47,7 +47,7 @@ json_object_t* json_object_parse_from_filepath(char const* filepath);
  * @note ``json_errno`` is reset before the parsing of the object.
  *
  * @retval NULL On failure
- * @retval A pointer to an allocated ``json_object_t``.
+ * @retval ptr A pointer to an allocated ``json_object_t``.
  *
  */
 json_object_t* json_object_parse_from_str(char const* str, size_t* index);
@@ -69,7 +69,7 @@ json_object_t* json_object_parse_from_str(char const* str, size_t* index);
  * @note ``json_errno`` is reset before the parsing of the array.
  *
  * @retval NULL On failure
- * @retval A pointer to an allocated ``json_array_t``.
+ * @retval ptr A pointer to an allocated ``json_array_t``.
  *
  */
 json_array_t* json_array_parse_from_fd(int fd);
@@ -83,7 +83,7 @@ json_array_t* json_array_parse_from_fd(int fd);
  * @note ``json_errno`` is reset before the parsing of the array.
  *
  * @retval NULL On failure
- * @retval A pointer to an allocated ``json_array_t``.
+ * @retval ptr A pointer to an allocated ``json_array_t``.
  *
  */
 json_array_t* json_array_parse_from_filepath(char const* filepath);
@@ -98,7 +98,7 @@ json_array_t* json_array_parse_from_filepath(char const* filepath);
  * @note ``json_errno`` is reset before the parsing of the array.
  *
  * @retval NULL On failure
- * @retval A pointer to an allocated ``json_array_t``.
+ * @retval ptr A pointer to an allocated ``json_array_t``.
  *
  */
 json_array_t* json_array_parse_from_str(char const* str, size_t* index);
