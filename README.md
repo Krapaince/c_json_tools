@@ -1,6 +1,6 @@
 # C JSON Tools
 
-This project is a C library which provide tools to parse, edit and generate
+This project is a C library which provides tools to parse, edit and generate
 `json` file.
 
 `file.json`:
@@ -39,7 +39,7 @@ int main(void)
 
 ## :books: Documenation
 You can find the documentation
-[here](https://c-json-tools.readthedocs.io/en/latest/). If you want an offline,
+[here](https://c-json-tools.readthedocs.io/en/latest/). If you want an offline
 version have a look
 [here](https://github.com/Krapaince/c_json_tools#api-documentation--).
 
@@ -49,13 +49,16 @@ This project was realised during my second year of study at Epitech. It helps
 me build a network project that you can find
 [here](https://github.com/Zumtak/NWP_MyTeams_Epitech).
 
-I have update the library since so the version used in the network project is
+I have updated the library since so the version used in the network project is
 outdated.
 
 ## :warning: Warning
 This project doesn't conform with [RFC 7159](https://tools.ietf.org/html/rfc7159
 ). If you want a project that feat this usage, please see
 [c-json](https://github.com/json-c/json-c).
+
+The number type handle by the library has as limit the C integer. It does not
+support the floating and the base 10 exponent.
 
 ## Prerequisites
 
@@ -113,7 +116,7 @@ Have a look [here](https://stackoverflow.com/questions/231760/what-does-a-type-f
 ```json
 {
     "a_json_object": 34
-} Some extra characters after final bracket
+} Some extra characters after the final bracket
 ```
 If there is characters after the fianl closing bracket, they will be read by the
 parser since it uses `getline()`.
@@ -121,7 +124,7 @@ parser since it uses `getline()`.
 - Documentation consistency
 
 The function index page of the documentation doesn't use the same layout.
-During the creation of the documentation I was testing the different options
+During the creation of the documentation I was testing two different approach:
 
 - Documentation in header which will be extracted by Doxygen
 - Documentation in `.rst` file which will be parsed by Sphinx
