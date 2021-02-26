@@ -124,7 +124,8 @@ parser since it uses `getline()`.
 - Documentation consistency
 
 The function index page of the documentation doesn't use the same layout.
-During the creation of the documentation I was testing two different approach:
+During the creation of the documentation, I was testing two different
+approaches:
 
 - Documentation in header which will be extracted by Doxygen
 - Documentation in `.rst` file which will be parsed by Sphinx
